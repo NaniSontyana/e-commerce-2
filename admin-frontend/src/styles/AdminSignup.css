@@ -1,0 +1,111 @@
+/* admin-frontend/src/styles/AdminSignup.css */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #16213e, #0f3460);
+  padding: 20px;
+}
+
+.signup-card {
+  background: #2a2a4a;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.signup-card:hover {
+  transform: translateY(-5px);
+}
+
+.signup-card h1 {
+  color: #00d4ff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.signup-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 8px;
+  background: #3a3a5a;
+  color: #e0e0e0;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.signup-card input:focus {
+  background: #4a4a6a;
+}
+
+.signup-card button {
+  width: 100%;
+  padding: 12px;
+  background: #00d4ff;
+  border: none;
+  border-radius: 8px;
+  color: #1a1a2e;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.signup-card button:hover {
+  background: #00b0cc;
+  transform: scale(1.05);
+}
+
+.signup-card .login-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+.signup-card .login-link a {
+  color: #00d4ff;
+  font-weight: bold;
+}
+
+.signup-card .login-link a:hover {
+  color: #00b0cc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signup-card {
+    padding: 30px;
+    max-width: 350px;
+  }
+
+  .signup-card h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .signup-card h1 {
+    font-size: 1.5rem;
+  }
+
+  .signup-card input,
+  .signup-card button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,443 @@
+/* src/styles/AboutUs.css */
+.aboutus-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutus-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.3)"/><circle cx="50" cy="30" r="0.8" fill="rgba(255,255,255,0.2)"/><circle cx="80" cy="70" r="1.2" fill="rgba(255,255,255,0.4)"/><circle cx="20" cy="80" r="0.9" fill="rgba(255,255,255,0.3)"/></svg>') repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.aboutus-scrollable {
+  padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  overflow-y: auto;
+  height: calc(100vh - 160px);
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.aboutus-scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+.aboutus-scrollable {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.aboutus-content {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.aboutus-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.aboutus-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  color: #333;
+}
+
+.aboutus-card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.aboutus-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.team-carousel {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.team-member {
+  text-align: center;
+  flex: 1;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.team-role {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.carousel-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #0056b3;
+}
+
+.milestone-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.milestone-list li {
+  font-size: 16px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.milestone-list li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  color: #ffd700;
+}
+
+.live-chat-widget {
+  text-align: center;
+}
+
+.live-chat-widget h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.live-chat-widget p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.chat-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-btn:hover {
+  background-color: #218838;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+
+/* Mobile Devices (Below 576px) */
+@media (max-width: 575.98px) {
+  .aboutus-scrollable {
+    padding: 15px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    height: calc(100vh - 140px);
+  }
+
+  .aboutus-title {
+    font-size: 22px;
+  }
+
+  .aboutus-card {
+    padding: 20px;
+  }
+
+  .aboutus-card h2 {
+    font-size: 18px;
+  }
+
+  .aboutus-card p {
+    font-size: 14px;
+  }
+
+  .team-member img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team-member h3 {
+    font-size: 16px;
+  }
+
+  .team-role {
+    font-size: 13px;
+  }
+
+  .carousel-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .milestone-list li {
+    font-size: 14px;
+  }
+
+  .live-chat-widget h3 {
+    font-size: 16px;
+  }
+
+  .live-chat-widget p {
+    font-size: 13px;
+  }
+
+  .chat-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Medium Devices (576px to 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .aboutus-scrollable {
+    padding: 20px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    height: calc(100vh - 140px);
+  }
+
+  .aboutus-title {
+    font-size: 24px;
+  }
+
+  .aboutus-card {
+    padding: 25px;
+  }
+
+  .aboutus-card h2 {
+    font-size: 19px;
+  }
+
+  .aboutus-card p {
+    font-size: 15px;
+  }
+
+  .team-member img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .team-member h3 {
+    font-size: 17px;
+  }
+
+  .team-role {
+    font-size: 14px;
+  }
+
+  .carousel-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 17px;
+  }
+
+  .milestone-list li {
+    font-size: 15px;
+  }
+
+  .live-chat-widget h3 {
+    font-size: 17px;
+  }
+
+  .live-chat-widget p {
+    font-size: 14px;
+  }
+
+  .chat-btn {
+    font-size: 15px;
+    padding: 10px 18px;
+  }
+}
+
+/* Large Devices (768px to 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .aboutus-scrollable {
+    padding: 20px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    height: calc(100vh - 90px);
+  }
+
+  .aboutus-title {
+    font-size: 26px;
+  }
+
+  .aboutus-card {
+    padding: 30px;
+  }
+
+  .aboutus-card h2 {
+    font-size: 20px;
+  }
+
+  .aboutus-card p {
+    font-size: 16px;
+  }
+
+  .team-member img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .team-member h3 {
+    font-size: 18px;
+  }
+
+  .team-role {
+    font-size: 14px;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .milestone-list li {
+    font-size: 16px;
+  }
+
+  .live-chat-widget h3 {
+    font-size: 18px;
+  }
+
+  .live-chat-widget p {
+    font-size: 14px;
+  }
+
+  .chat-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Extra Large Devices (992px and above) */
+@media (min-width: 992px) {
+  .aboutus-scrollable {
+    padding: 30px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    height: calc(100vh - 100px);
+  }
+
+  .aboutus-title {
+    font-size: 28px;
+  }
+
+  .aboutus-card {
+    padding: 30px;
+  }
+
+  .aboutus-card h2 {
+    font-size: 20px;
+  }
+
+  .aboutus-card p {
+    font-size: 16px;
+  }
+
+  .team-member img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .team-member h3 {
+    font-size: 18px;
+  }
+
+  .team-role {
+    font-size: 14px;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .milestone-list li {
+    font-size: 16px;
+  }
+
+  .live-chat-widget h3 {
+    font-size: 18px;
+  }
+
+  .live-chat-widget p {
+    font-size: 14px;
+  }
+
+  .chat-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}

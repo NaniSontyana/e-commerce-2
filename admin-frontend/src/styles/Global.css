@@ -1,0 +1,28 @@
+/* admin-frontend/src/styles/Global.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: #1a1a2e;
+    color: #e0e0e0;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #00d4ff;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  .error {
+    color: #ff4d4d;
+    margin: 10px 0;
+    text-align: center;
+  }

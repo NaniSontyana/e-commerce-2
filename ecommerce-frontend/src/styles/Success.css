@@ -1,0 +1,211 @@
+/* Base styles for the success wrapper */
+.success-wrapper {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+}
+
+/* Success container */
+.success-container {
+  text-align: center;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Title styling */
+.success-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff9800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Success message */
+.success-message {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* Order details */
+.order-details {
+  text-align: left;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.order-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+}
+
+.order-item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 15px;
+  border: 1px solid #e0e0e0;
+  display: block; /* Ensure image is visible */
+}
+
+.order-item-image.error-image {
+  border: 1px solid #d32f2f; /* Red border for error state */
+}
+
+.order-item-details {
+  flex: 1;
+  color: #333;
+}
+
+.order-info p {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #666;
+}
+
+.order-info p strong {
+  color: #ff9800;
+}
+
+.order-info h3 {
+  font-size: 1.5rem;
+  color: #ff9800;
+  margin-bottom: 15px;
+}
+
+.order-info h4 {
+  font-size: 1.2rem;
+  color: #ff9800;
+  margin: 15px 0 10px;
+}
+
+/* Error message */
+.error-message {
+  font-size: 1.2rem;
+  color: #d32f2f;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Button group */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.return-btn1 {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.return-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.return-btn:active {
+  transform: scale(0.95);
+}
+
+/* Responsive design */
+@media (max-width: 576px) {
+  .success-container {
+    padding: 20px;
+  }
+
+  .success-title {
+    font-size: 2rem;
+  }
+
+  .success-message {
+    font-size: 1rem;
+  }
+
+  .order-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .order-item-image {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .order-info p,
+  .order-info h3,
+  .order-info h4 {
+    font-size: 0.9rem;
+  }
+
+  .return-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  .success-container {
+    max-width: 600px;
+  }
+
+  .order-item {
+    flex-direction: row;
+  }
+
+  .return-btn {
+    padding: 12px 25px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .success-container {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .success-container {
+    max-width: 800px;
+  }
+}

@@ -1,0 +1,1740 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone",
+      "price": 150000,
+      "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/x/v/y/-original-imah4jz66dmcwhmd.jpeg?q=70",
+      "images": [
+        "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/x/v/y/-original-imah4jz66dmcwhmd.jpeg?q=70",
+        "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/y/m/i/-original-imah4jz66pzdzy4z.jpeg?q=70",
+        "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/x/v/y/-original-imah4jz66dmcwhmd.jpeg?q=70"
+      ],
+      "category": "Electronics",
+      "featured": true,
+      "description": "The iPhone 16 Pro Max is the ultimate flagship smartphone that offers cutting-edge technology, stunning performance, and an unmatched user experience. Powered by the new A16 Bionic chip, it delivers blazing-fast speed and exceptional energy efficiency. The Super Retina XDR display ensures vibrant colors and deep contrast, making every image pop. Equipped with a triple-camera system, including a 48MP primary sensor, the iPhone 16 Pro Max captures stunning photos and videos in any light. With 5G connectivity, ultra-fast performance, and all-day battery life, it's designed to meet the needs of even the most demanding users. Available in four striking colors, the iPhone 16 Pro Max is a perfect blend of style, power, and innovation.",
+      "specifications": {
+        "Processor": "A16 Bionic Chip",
+        "Display": "6.7-inch Super Retina XDR Display",
+        "Resolution": "2778 x 1284 pixels",
+        "Camera": "Triple 48MP + 12MP Ultra-Wide + 12MP Telephoto",
+        "Battery Life": "Up to 28 hours of video playback",
+        "Operating System": "iOS 16",
+        "Storage Options": "128GB, 256GB, 512GB, 1TB",
+        "5G Connectivity": "Yes",
+        "Water Resistance": "IP68",
+        "Face ID": "Yes",
+        "Charging": "MagSafe and Lightning port",
+        "Weight": "238g",
+        "Dimensions": "160.8 x 78.1 x 7.65 mm",
+        "Colors": "Space Black, Silver, Gold, Deep Purple",
+        "Wi-Fi": "Wi-Fi 6",
+        "Bluetooth": "Bluetooth 5.2",
+        "Sensors": "LiDAR Scanner, Proximity Sensor, Ambient Light Sensor, Accelerometer, Gyroscope, Barometer"
+      },
+      "stock": true
+ 
+
+    },
+    {
+      "id": 2,
+      "name": "Headphones",
+      "price": 999,
+      "image": "https://img.freepik.com/free-photo/headphones-displayed-against-dark-background_157027-4466.jpg?t=st=1740675012~exp=1740678612~hmac=2b20b536d313c41b876b91d5cad4519b535f0806e25933bedab34ac8d27de2fa&w=740",
+      "category": "Electronics",
+      "featured": false,
+      "description": "Experience unparalleled sound quality with these Noise Cancelling Bluetooth Headphones. Equipped with advanced Active Noise Cancellation (ANC) technology, these headphones block out ambient noise, providing an immersive listening experience. Whether you're enjoying your favorite playlist or taking a call, the 40mm drivers deliver rich, clear audio with deep bass. With a battery life of up to 30 hours, you can enjoy extended listening sessions without worrying about running out of power. The lightweight design ensures comfort, making these headphones perfect for long hours of use. Plus, the built-in microphone and Bluetooth 5.0 connectivity make hands-free calls and easy pairing with your devices a breeze. Ideal for travel, work, or just relaxing at home, these headphones offer a premium audio experience on the go.",
+      "specifications": {
+        "Processor": "N/A",
+        "Connectivity": "Bluetooth 5.0",
+        "Battery Life": "30 hours",
+        "Charging Time": "2 hours",
+        "Driver Size": "40mm",
+        "Frequency Response": "20Hz - 20kHz",
+        "Impedance": "32Ω",
+        "Weight": "250g",
+        "Noise Cancellation": "Active Noise Cancellation",
+        "Microphone": "Built-in Microphone",
+        "Compatibility": "Works with Android, iOS, and Windows devices",
+        "Audio Codec": "AAC, SBC"
+      },
+      "stock": true
+    },
+    {
+      "id": 3,
+      "name": "Smart Watch",
+      "price": 1499,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/s/i/u/-original-imah76jt64ffmwg4.jpeg?q=70",
+      "category": "Electronics",
+      "featured": true,
+      "description": "monitor health metrics, and track your fitness in real-time. It comes with a 1.5-inch AMOLED display",
+      "specifications": {
+        "Display": "1.5-inch AMOLED",
+        "Heart Rate Monitor": "Yes",
+        "Step Tracking": "Yes",
+        "Sleep Monitoring": "Yes",
+        "Water Resistance": "IP68",
+        "Compatibility": "Android & iOS",
+        "Battery Life": "Up to 7 days",
+        "Charging": "Wireless charging",
+        "Colors": "Black, Silver, Rose Gold"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Bluetooth Speaker",
+      "price": 899,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/k69ncsw0/speaker/mobile-tablet-speaker/7/g/q/zebronics-zeb-county-original-imafzrpeutbegxjh.jpeg?q=70",
+      "category": "Electronics",
+      "featured": false,
+      "description": "A compact Bluetooth speaker that delivers rich, high-quality sound in a portable design. With Bluetooth 5.0 connectivity, it ensures a stable connection and impressive audio performance. The speaker is water-resistant, making it perfect for outdoor activities. Enjoy up to 12 hours of continuous playback and make hands-free calls with the built-in microphone.",
+      "specifications": {
+        "Bluetooth Version": "5.0",
+        "Battery Life": "Up to 12 hours",
+        "Water Resistance": "IPX7",
+        "Speaker Output": "20W",
+        "Microphone": "Built-in for hands-free calling",
+        "Charging Port": "USB-C",
+        "Colors": "Black, Blue, Red"
+      }
+    },
+    {
+      "id": 5,
+      "name": "4K Television",
+      "price": 90000,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/television/r/5/y/-original-imah45dz7wrms9wk.jpeg?q=70",
+      "category": "Electronics",
+      "featured": true,
+      "description": "The 4K TV provides a true cinema experience with stunning Ultra HD resolution. HDR technology enhances picture quality by providing deeper blacks and brighter whites, offering more contrast and detail. With smart features built-in, you can access popular streaming apps like Netflix, YouTube, and Amazon Prime. Whether watching movies, gaming, or streaming content, this TV delivers an impressive experience.",
+      "specifications": {
+        "Display": "55-inch 4K UHD",
+        "Resolution": "3840 x 2160 pixels",
+        "HDR": "HDR10+",
+        "Smart TV": "Yes (Built-in apps for Netflix, YouTube, etc.)",
+        "Connectivity": "Wi-Fi, Ethernet, HDMI",
+        "Audio": "Dolby Digital",
+        "Voice Control": "Yes (Google Assistant, Alexa)",
+        "Ports": "3 HDMI, 2 USB"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Fitness Tracker",
+      "price": 999,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/smart-band-tag/m/9/r/amoled-no-medium-7-yes-yes-c68-android-ios-cubonic-yes-original-imah8yyked4derp7.jpeg?q=70",
+      "category": "Electronics",
+      "featured": true,
+      "description": "A slim and lightweight fitness tracker that helps you monitor your daily activity, sleep patterns, and heart rate. With advanced sensors, it provides real-time insights into your health. Whether you're running, cycling, or doing yoga, this device helps you keep track of your progress and stay motivated.",
+      "specifications": {
+        "Display": "OLED Touchscreen",
+        "Heart Rate Monitor": "Yes",
+        "Step Counting": "Yes",
+        "Sleep Tracking": "Yes",
+        "Water Resistance": "5ATM",
+        "Battery Life": "Up to 10 days",
+        "Connectivity": "Bluetooth",
+        "Compatibility": "Android & iOS",
+        "Colors": "Black, Pink, Blue"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Digital Camera",
+      "price": 50000,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/dslr-camera/8/g/b/eos-r50-24-2-r50-canon-original-imagngcb6vj5fmyg.jpeg?q=70",
+      "category": "Electronics",
+      "featured": true,
+      "description": "A high-performance digital camera that offers sharp images, fast autofocus, and versatile shooting modes. With a 24.2 MP sensor and 10x optical zoom, you can capture beautiful landscapes, portraits, and action shots. It also features a built-in Wi-Fi connection for easy photo sharing",
+      "specifications": {
+        "Sensor": "24.2 MP",
+        "Optical Zoom": "10x",
+        "Display": "3-inch LCD",
+        "Video Resolution": "1080p Full HD",
+        "Wi-Fi": "Yes",
+        "Battery Life": "350 shots",
+        "Flash": "Built-in",
+        "Connectivity": "USB, HDMI"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Camera Lens",
+      "price": 5000,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/lens/h/u/3/-original-imagkwypevradgkp.jpeg?q=70",
+      "category": "Electronics",
+      "featured": true,
+      "description": "A premium camera lens designed for clarity and precision. With a fast aperture and advanced optical features, this lens is perfect for capturing professional-grade photos in various conditions. Ideal for portrait and landscape photography",
+      "specifications": {
+        "Focal Length": "50mm",
+        "Aperture": "f/1.8",
+        "Mount Type": "Canon EF/ Nikon F",
+        "Lens Type": "Prime Lens",
+        "Compatibility": "Canon, Nikon DSLR",
+        "Weight": "200g",
+        "Filter Size": "58mm"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Wireless Mouse",
+      "price": 999,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/mouse/d/f/d/rechargeable-m108-bluetooth-mouse-dezful-original-imah9nhmmqty7yzp.jpeg?q=70",
+      "category": "Electronics",
+      "featured": false,
+      "description": "A high-performance wireless mouse designed for comfort and precision. With adjustable DPI settings, it allows you to control sensitivity for gaming or work. The ergonomic design ensures comfort during long hours of use, and the wireless technology provides freedom of movement.",
+      "specifications": {
+        "DPI Range": "800-3200 DPI",
+        "Connectivity": "2.4GHz Wireless",
+        "Battery Life": "Up to 12 months",
+        "Design": "Ergonomic",
+        "Buttons": "6 programmable buttons",
+        "Compatibility": "Windows, macOS, Linux"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Portable Power Bank",
+      "price": 1499,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/power-bank/n/m/i/exotic-power-bank-k9-iqoniqe-original-imahfj9bxn9sjrnx.jpeg?q=70",
+      "category": "Electronics",
+      "featured": false,
+      "description": "A portable power bank designed to charge your devices quickly and efficiently. With a high-capacity battery, it can charge smartphones, tablets, and other USB-powered devices multiple times. The compact and lightweight design makes it easy to carry on-the-go.",
+      "specifications": {
+        "Capacity": "10000mAh",
+        "Input": "5V/2A",
+        "Output Ports": "2 USB-A, 1 USB-C",
+        "Charging Speed": "Fast charging (Quick Charge 3.0)",
+        "Dimensions": "4.5 x 2.3 x 0.9 inches",
+        "Weight": "200g",
+        "Compatibility": "All USB-powered devices"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Winter Coat",
+      "price": 1500,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/coat/3/p/e/l-women-s-little-heart-wool-jacket-lyla-fashion-original-imah69yjudjwnx5c.jpeg?q=70",
+      "category": "Clothing",
+      "featured": true,
+      "description": "A stylish winter coat designed for warmth and comfort. Perfect for cold weather, featuring a cozy wool material and a modern design.",
+      "specifications": {
+        "material": "Wool",
+        "color": "Grey",
+        "sizes_available": [
+          "S",
+          "M",
+          "L"
+        ],
+        "season": "Winter",
+        "fit": "Regular"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Leather Jacket",
+      "price": 1200,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/g/t/g/m-1-no-rider-jacket-febric-collection-original-imah5hbezws4nhcs.jpeg?q=70",
+      "category": "Clothing",
+      "featured": true,
+      "description": "A sleek leather jacket with a rugged style. Ideal for a casual, fashionable look, perfect for layering over your outfits.",
+      "specifications": {
+        "material": "Genuine Leather",
+        "color": "Black",
+        "sizes_available": [
+          "M",
+          "L",
+          "XL"
+        ],
+        "style": "Biker",
+        "care_instructions": "Dry clean only"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Sneakers",
+      "price": 2000,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/0/b/s/-original-imah5ux3fpj6ahat.jpeg?q=70",
+      "category": "Clothing",
+      "featured": false,
+      "description": "Trendy sneakers designed for comfort and style. Perfect for casual wear and outdoor activities.",
+      "specifications": {
+        "material": "Synthetic",
+        "color": "White",
+        "sizes_available": [
+          "6",
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "type": "Casual",
+        "closure_type": "Lace-up"
+      }
+    },
+    {
+      "id": 14,
+      "name": "T-shirt",
+      "price": 1599,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/t/q/a/xs-dx1986-010-nike-original-imah3yzy8zqq5jtp.jpeg?q=70",
+      "category": "Clothing",
+      "featured": false,
+      "description": "A comfortable and stylish Nike T-shirt, perfect for everyday wear or casual activities. Made with breathable fabric for comfort.",
+      "specifications": {
+        "material": "Cotton",
+        "color": "Black",
+        "sizes_available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "neck_type": "Round",
+        "fit": "Regular"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Bag Backpack",
+      "price": 1422,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/backpack/o/h/4/6-roam-12-frontier19cbblk-laptop-backpack-urban-jungle-22-17-original-imah3wqz2amwhege.jpeg?q=70",
+      "category": "Clothing",
+      "featured": true,
+      "description": "A spacious and durable backpack designed for everyday use, with a special compartment for laptops and extra storage space.",
+      "specifications": {
+        "material": "Polyester",
+        "color": "Black",
+        "dimensions": "22 x 17 x 6 inches",
+        "capacity": "22L",
+        "features": [
+          "Laptop compartment",
+          "Water-resistant",
+          "Multiple pockets"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "name": "Slippers",
+      "price": 999,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/slipper-flip-flop/j/r/a/3-395229-puma-black-white-original-imaguw722edtur25.jpeg?q=70",
+      "category": "Clothing",
+      "featured": true,
+      "description": "A comfortable pair of slippers designed for casual wear, made with soft material for all-day comfort.",
+      "specifications": {
+        "material": "Rubber",
+        "color": "Black/White",
+        "sizes_available": [
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "type": "Slip-on",
+        "fit": "Relaxed"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Winter Gloves",
+      "price": 499,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/glove/n/j/g/free-men-women-adult-warm-riding-gloves-touch-screen-finger-original-imah7zbuug3uaxzy.jpeg?q=70",
+      "category": "Clothing",
+      "featured": false,
+      "description": "Warm winter gloves designed to protect your hands from the cold. These gloves are touchscreen compatible.",
+      "specifications": {
+        "material": "Polyester",
+        "color": "Black",
+        "sizes_available": [
+          "One Size"
+        ],
+        "features": [
+          "Touchscreen compatible",
+          "Warm lining",
+          "Windproof"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "name": "Sports Shoes",
+      "price": 2999,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/o/n/t/-original-imah46k8hv3hpaxn.jpeg?q=70",
+      "category": "Clothing",
+      "featured": true,
+      "description": "High-performance sports shoes designed for running and athletic activities, offering great support and comfort.",
+      "specifications": {
+        "material": "Mesh, Rubber",
+        "color": "Blue",
+        "sizes_available": [
+          "6",
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "type": "Running Shoes",
+        "sole": "Rubber",
+        "closure_type": "Lace-up"
+      }
+    },
+    {
+      "id": 19,
+      "name": "Jacket",
+      "price": 1800,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/8/k/b/s-no-270796-the-souled-store-original-imah8ah3knrsgvzs.jpeg?q=70",
+      "category": "Clothing",
+      "featured": true,
+      "description": "A trendy and fashionable jacket, perfect for layering in cooler weather. Offers comfort and style for everyday use.",
+      "specifications": {
+        "material": "Cotton",
+        "color": "Olive Green",
+        "sizes_available": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "style": "Casual",
+        "closure_type": "Zipper",
+        "fit": "Slim"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Summer Hat",
+      "price": 299,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/krntoy80/hat/x/e/7/mens-sun-hat-wide-brim-summer-sun-cap-uv-protection-fishsing-hat-original-imag5empgkzx3jry.jpeg?q=70",
+      "category": "Clothing",
+      "featured": false,
+      "description": "A lightweight summer hat designed for sun protection. Features a wide brim and UV protection to keep you safe under the sun.",
+      "specifications": {
+        "material": "Polyester",
+        "color": "Beige",
+        "sizes_available": [
+          "One Size"
+        ],
+        "features": [
+          "UV Protection",
+          "Wide Brim",
+          "Breathable"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "name": "Pet Collar",
+      "price": 375,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/pet-collar-harness/h/k/n/medium-cat-harness-for-small-cats-lightweight-soft-walking-original-imah7tgvcgtqdqrp.jpeg?q=70",
+      "category": "Pets",
+      "featured": true,
+      "description": "A soft and lightweight pet collar designed for comfort during walks. Perfect for small cats, providing both safety and style.",
+      "specifications": {
+        "material": "Polyester",
+        "color": "Blue",
+        "sizes_available": [
+          "Small",
+          "Medium",
+          "Large"
+        ],
+        "adjustable": true,
+        "features": [
+          "Soft",
+          "Lightweight",
+          "Durable"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "name": "Pet Bed",
+      "price": 1747,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/pet-bed/6/j/0/m-igloo-dog-house-portable-cat-igloo-bed-with-removable-cushion-original-imagstkaceu3sspc.jpeg?q=70",
+      "category": "Pets",
+      "featured": true,
+      "description": "A cozy igloo-shaped bed for pets that provides comfort and warmth. Features a removable cushion for easy cleaning.",
+      "specifications": {
+        "material": "Cotton, Polyester",
+        "color": "Gray",
+        "dimensions": "45 x 45 x 40 cm",
+        "removable_cushion": true,
+        "washable": true
+      }
+    },
+    {
+      "id": 23,
+      "name": "Pet Toy",
+      "price": 800,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/pet-toy/j/f/q/13-wt2020online20201030-waggy-tails-original-imah4svwg5u5quqh.jpeg?q=70",
+      "category": "Pets",
+      "featured": false,
+      "description": "A fun and interactive pet toy designed to keep your furry friend entertained for hours. Ideal for playtime and exercise.",
+      "specifications": {
+        "material": "Rubber",
+        "color": "Multi-color",
+        "dimensions": "20 x 8 cm",
+        "suitable_for": "Dogs, Cats",
+        "features": [
+          "Durable",
+          "Interactive"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "name": "Pet Food Bowl",
+      "price": 599,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/pet-bowl-bottle/p/9/l/lpf2108-lekored-2000-original-imah89f28rptmtg2.jpeg?q=70",
+      "category": "Pets",
+      "featured": false,
+      "description": "A sturdy and stylish food bowl for pets. Made of high-quality material, easy to clean, and perfect for feeding your pet.",
+      "specifications": {
+        "material": "Stainless Steel",
+        "color": "Silver",
+        "capacity": "2000 ml",
+        "dimensions": "20 x 20 x 5 cm",
+        "features": [
+          "Anti-slip base",
+          "Dishwasher safe"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "name": "Pet Leash",
+      "price": 364,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/pet-leash-chain/q/k/1/upgraded01-pet-a-pet-original-imagzk67vnkagwam.jpeg?q=70",
+      "category": "Pets",
+      "featured": true,
+      "description": "A strong and durable pet leash that provides control while walking your dog. Comfortable and easy to hold.",
+      "specifications": {
+        "material": "Nylon",
+        "color": "Black",
+        "length": "1.2 m",
+        "width": "2 cm",
+        "features": [
+          "Durable",
+          "Comfortable grip",
+          "Heavy-duty"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "name": "Pet Carrier",
+      "price": 1512,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/pet-carrier/g/5/f/pet-astronaut-space-bubble-capsule-backpack-01-okasta-original-imagwtfznp3vujz6.jpeg?q=70",
+      "category": "Pets",
+      "featured": true,
+      "description": "A unique and trendy astronaut-style pet carrier, providing both comfort and style for your pet while traveling.",
+      "specifications": {
+        "material": "Polyester, Acrylic",
+        "color": "Blue",
+        "dimensions": "30 x 30 x 40 cm",
+        "suitable_for": "Small to Medium Pets",
+        "features": [
+          "Bubble window",
+          "Breathable mesh",
+          "Comfortable straps"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "name": "Pet Brush",
+      "price": 389,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/pet-comb-brush/v/u/9/small-comdb3grs-bonesup-original-imagthawytrtf2ub.jpeg?q=70",
+      "category": "Pets",
+      "featured": false,
+      "description": "A gentle pet brush designed for smooth brushing, helping to keep your pet’s coat clean and healthy.",
+      "specifications": {
+        "material": "Plastic, Rubber",
+        "color": "Green",
+        "sizes_available": [
+          "Small",
+          "Medium",
+          "Large"
+        ],
+        "suitable_for": "Dogs, Cats",
+        "features": [
+          "Soft bristles",
+          "Anti-static",
+          "Comfortable handle"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "name": "Pet Shampoo",
+      "price": 499,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/pet-shampoo/q/1/d/1000-neem-plus-herbal-pet-shampoo-coat-cleansing-and-original-imah8bcqkkem3tju.jpeg?q=70",
+      "category": "Pets",
+      "featured": false,
+      "description": "A herbal pet shampoo that cleans and nourishes your pet’s coat. Infused with neem for added protection and shine.",
+      "specifications": {
+        "material": "Herbal Extracts",
+        "volume": "1000 ml",
+        "suitable_for": "Dogs, Cats",
+        "features": [
+          "Cleansing",
+          "Coat nourishment",
+          "Anti-fungal"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "name": "Pet Jacket",
+      "price": 376,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/pet-apparel/c/m/b/m-dogs-pomeranian-omm-original-imah8zyzst4aysw8.jpeg?q=70",
+      "category": "Pets",
+      "featured": true,
+      "description": "A stylish jacket designed for pets to keep them warm during chilly weather. Comfortable and easy to put on.",
+      "specifications": {
+        "material": "Fleece",
+        "color": "Red",
+        "sizes_available": [
+          "Small",
+          "Medium",
+          "Large"
+        ],
+        "features": [
+          "Warm",
+          "Soft",
+          "Easy to wear"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "name": "Pet Blanket",
+      "price": 492,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/pet-blanket/m/f/k/medium-green-dog-quilt-mqg34-margaux-original-imagvhfucxvvcnf8.jpeg?q=70",
+      "category": "Pets",
+      "featured": false,
+      "description": "A soft and comfortable pet blanket perfect for keeping your pet cozy and warm. Ideal for use in pet beds or on the couch.",
+      "specifications": {
+        "material": "Cotton, Fleece",
+        "color": "Green",
+        "dimensions": "50 x 60 cm",
+        "features": [
+          "Soft",
+          "Machine washable",
+          "Cozy"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "name": "Electric Kettle",
+      "price": 1300,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/electric-kettle/4/r/e/mpk15m-mpk15m-multi-purpose-kettle-with-2-inner-pot-egg-boiler-original-imah6qwxnamgsfr4.jpeg?q=70",
+      "category": "Home",
+      "featured": true,
+      "description": "A versatile electric kettle with multiple functions, including boiling water and cooking eggs. Comes with two inner pots for convenience.",
+      "specifications": {
+        "material": "Stainless Steel, Plastic",
+        "color": "Silver",
+        "capacity": "1.5L",
+        "features": [
+          "Multi-purpose",
+          "Auto shut-off",
+          "Boils quickly"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "name": "Coffee Maker",
+      "price": 8999,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/coffee-maker/a/5/t/espresso-coffee-master-5s-20-bar-espresso-coffee-machine-with-original-imah8syyqxfg8dyu.jpeg?q=70",
+      "category": "Home",
+      "featured": true,
+      "description": "An espresso coffee machine with a 20-bar pump for professional-grade coffee. Ideal for coffee lovers who prefer cafe-style beverages.",
+      "specifications": {
+        "material": "Stainless Steel",
+        "color": "Black",
+        "capacity": "1.5L",
+        "pressure": "20 bar",
+        "features": [
+          "Espresso",
+          "Milk frother",
+          "Easy to use"
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "name": "Air Purifier",
+      "price": 10499,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/air-purifier/h/s/2/23-8-ac0950-60-24-2-7-philips-domestic-appliances-original-imah4jvnrf3zapfz.jpeg?q=70",
+      "category": "Home",
+      "featured": false,
+      "description": "A high-efficiency air purifier that helps improve air quality by removing dust, allergens, and other pollutants.",
+      "specifications": {
+        "material": "Plastic",
+        "color": "White",
+        "filter_type": "HEPA",
+        "features": [
+          "Quiet operation",
+          "Energy-efficient",
+          "High-performance"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "name": "Blender",
+      "price": 1599,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/hand-blender/s/5/p/regency-hand-blender-600w-variable-speed-modes-speed-regulator-original-imah29p8tycdvxhu.jpeg?q=70",
+      "category": "Home",
+      "featured": false,
+      "description": "A powerful hand blender with variable speed settings, perfect for blending soups, smoothies, and more.",
+      "specifications": {
+        "material": "Plastic, Stainless Steel",
+        "color": "White",
+        "power": "600W",
+        "features": [
+          "Variable speed",
+          "Lightweight",
+          "Easy to clean"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "name": "LED Desk Lamp",
+      "price": 699,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/table-lamp/l/9/2/touch-switch-desk-night-study-lamp-for-children-reading-office-original-imah54fazkfmhv2q.jpeg?q=70",
+      "category": "Home",
+      "featured": false,
+      "description": "A modern LED desk lamp with a touch switch, ideal for reading and studying. Features adjustable brightness levels.",
+      "specifications": {
+        "material": "Plastic",
+        "color": "White",
+        "power": "5W",
+        "features": [
+          "Touch control",
+          "Adjustable brightness",
+          "Energy-saving"
+        ]
+      }
+    },
+
+
+    {
+      "id": 36,
+      "name": "Electric Fan",
+      "price": 2999,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/fan/m/y/i/2134841511010-32-1-ceiling-fan-1200-orient-electric-original-imah5tgnebwv8tjc.jpeg?q=70",
+      "category": "Home",
+      "featured": false,
+      "description": "A powerful ceiling fan with 1200 RPM for effective air circulation. Features a sleek design and is perfect for any room in the house.",
+      "specifications": {
+        "speed": "1200 RPM",
+        "blade_size": "1200 mm",
+        "motor": "High-performance motor",
+        "power_consumption": "75W",
+        "color": "White"
+      }
+    },
+    {
+      "id": 37,
+      "name": "Smart Home Hub",
+      "price": 341,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/ksuowi80/speaker-mobile-mod/u/z/1/smart-led-music-light-bulb-remote-controller-with-colourful-original-imag6b59phgnsvmz.jpeg?q=70",
+      "category": "Home",
+      "featured": true,
+      "description": "A versatile smart home hub that can be used to control various smart devices. Includes remote control and colorful LED lights for enhanced ambiance.",
+      "specifications": {
+        "compatible_devices": "Smart bulbs, speakers, security cameras",
+        "connectivity": "Wi-Fi, Bluetooth",
+        "power_source": "AC Power",
+        "features": "Colorful LED lighting, Remote control"
+      }
+    },
+    {
+      "id": 38,
+      "name": "Pet Vacuum Cleaner",
+      "price": 24000,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/vacuum-cleaner/e/j/f/t10s-self-emptying-robot-vacuum-and-mop-ilife-original-imagu9swddnnjsgd.jpeg?q=70",
+      "category": "Home",
+      "featured": true,
+      "description": "A robotic vacuum cleaner designed specifically for pet owners. It has self-emptying capabilities and includes a mop for a thorough clean.",
+      "specifications": {
+        "suction_power": "3000Pa",
+        "battery_life": "120 minutes",
+        "self_emptying": "Yes",
+        "mop_function": "Yes",
+        "color": "Black"
+      }
+    },
+    {
+      "id": 39,
+      "name": "Smart Thermostat",
+      "price": 1649,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/kf1fo280/electronic-hobby-kit/r/w/c/ac-220v-adjustable-digital-thermostat-10a-temperature-humidity-original-imafvksqabcr5ukn.jpeg?q=70",
+      "category": "Home",
+      "featured": false,
+      "description": "A smart digital thermostat that allows precise temperature control for your home. Compatible with various home heating and cooling systems.",
+      "specifications": {
+        "temperature_range": "10°C to 40°C",
+        "display": "Digital",
+        "power_input": "AC 220V",
+        "control": "Manual and Remote"
+      }
+    },
+    {
+      "id": 40,
+      "name": "Light",
+      "price": 100,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/emergency-light/c/p/a/airify-10w-mini-portable-table-fan-lamp-3-speed-modes-3-lighting-original-imah46kpxcrzphb8.jpeg?q=70",
+      "category": "Home",
+      "featured": false,
+      "description": "A portable emergency light that doubles as a table fan. Ideal for power outages and provides up to three lighting modes.",
+      "specifications": {
+        "power": "10W",
+        "battery": "Rechargeable",
+        "light_modes": "3",
+        "fan_speeds": "3",
+        "color": "White"
+      }
+    },
+    {
+      "id": 41,
+      "name": "Smart Speaker",
+      "price": 5499,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/smart-speaker/a/6/l/b09b917z8d-alexa-original-imah4wy9zzezh5pv.jpeg?q=70",
+      "category": "Electronics",
+      "featured": true,
+      "description": "A smart speaker with Alexa built-in, offering voice-controlled music, smart home integration, and more.",
+      "specifications": {
+        "voice_assistant": "Alexa",
+        "connectivity": "Wi-Fi, Bluetooth",
+        "sound_quality": "360-degree sound",
+        "color": "Black",
+        "dimensions": "10 x 10 x 15 cm"
+      }
+    },
+    {
+      "id": 42,
+      "name": "Smart Ring",
+      "price": 3799,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/smart-ring/f/y/p/12-smart-ring-active-boat-original-imah2uxm9jcnzwgf.jpeg?q=70",
+      "category": "Electronics",
+      "featured": false,
+      "description": "A stylish smart ring that tracks fitness, sleep, and health metrics. Can sync with your smartphone for real-time data.",
+      "specifications": {
+        "material": "Stainless steel",
+        "battery_life": "Up to 7 days",
+        "compatibility": "iOS, Android",
+        "features": "Activity tracking, Sleep monitoring"
+      }
+    },
+    {
+      "id": 43,
+      "name": "Smart Glasses",
+      "price": 1498,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/smart-glass/n/e/f/mini002-irusu-original-imah8xjgqfktfmzv.jpeg?q=70",
+      "category": "Electronics",
+      "featured": true,
+      "description": "A pair of smart glasses with a built-in display and voice control for seamless connectivity to your devices.",
+      "specifications": {
+        "lens_type": "Anti-glare",
+        "connectivity": "Bluetooth",
+        "battery_life": "5 hours",
+        "features": "Voice assistant, Display"
+      }
+    },
+    {
+      "id": 44,
+      "name": "Electric Kettle with Temperature Control",
+      "price": 1349,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/electric-kettle/v/u/d/elegant-glass-kettle-116052-kent-original-imahfzzucdv6gb4n.jpeg?q=70",
+      "category": "Home",
+      "featured": false,
+      "description": "An elegant electric kettle with temperature control settings for brewing different types of beverages at the perfect temperature.",
+      "specifications": {
+        "capacity": "1.7L",
+        "temperature_settings": "Adjustable",
+        "material": "Glass",
+        "color": "Clear"
+      }
+    },
+    {
+      "id": 45,
+      "name": "Portable Blender",
+      "price": 1949,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/mixer-grinder-juicer/j/p/z/rechargeable-portable-blender-for-smoothie-milk-shakes-crushing-original-imah5thzhjqvzhg9.jpeg?q=70",
+      "category": "Home",
+      "featured": false,
+      "description":"A rechargeable portable blender for smoothies, milkshakes, and crushing ice. Perfect for on-the-go convenience",
+      "specifications":{
+        "capacity": "500 ml",
+        "battery_life": "15 blends",
+        "motor": "300W",
+        "material": "Plastic, Stainless Steel"
+      }
+      },
+
+
+      {
+        "id": 46,
+        "name": "Table Lamp",
+        "price": 499,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/table-lamp/o/l/d/rovello-led6wchtbl-rvl-wh-pack-of-1-crompton-25-original-imah88ffpyfzmcrt.jpeg?q=70",
+        "category": "Home",
+        "featured": true,
+        "description": "A stylish and modern LED table lamp perfect for home decor. The Rovello LED Table Lamp offers adjustable brightness and energy-saving features for a cozy and warm atmosphere.",
+        "specifications": {
+            "brand": "Crompton",
+            "material": "Plastic",
+            "dimensions": "25 x 25 x 25 cm",
+            "power": "6W",
+            "color": "White",
+            "weight": "0.5 kg",
+            "warranty": "1 year"
+        }
+    },
+    {
+        "id": 47,
+        "name": "Bamboo Towel Set",
+        "price": 349,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/bath-towel/4/p/i/hampton-home-100-cotton-380-gsm-bath-towel-1-55-btdgr-380-original-imah9ecwvsf7nyua.jpeg?q=70",
+        "category": "Home",
+        "featured": true,
+        "description": "Soft, absorbent, and eco-friendly, this Bamboo Towel Set is made from 100% cotton and bamboo fibers, providing an incredibly plush experience. Ideal for bath or beach use.",
+        "specifications": {
+            "material": "100% Cotton & Bamboo",
+            "weight": "380 GSM",
+            "size": "1 x Bath Towel (55 x 110 cm)",
+            "color": "Green",
+            "wash care": "Machine washable",
+            "pack": "1 Towel"
+        }
+    },
+    {
+        "id": 48,
+        "name": "Cookware Set",
+        "price": 1883,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/cookware-set/z/w/a/6-migo-fktm-6-pcs-set-beige-b-impex-original-imah2uvtbpxwcapx.jpeg?q=70",
+        "category": "Home",
+        "featured": false,
+        "description": "This 6-piece cookware set includes a variety of pots and pans designed for everyday cooking. The high-quality material ensures durability and excellent heat distribution.",
+        "specifications": {
+            "material": "Non-stick",
+            "number_of_pieces": 6,
+            "color": "Beige",
+            "compatible_with": "Gas & Electric Stove",
+            "warranty": "1 year"
+        }
+    },
+    {
+        "id": 49,
+        "name": "Electric Grill Pan",
+        "price": 3549,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/pot-pan/4/c/t/korean-style-2-in-1-multifunctional-nonstick-electric-bbq-original-imagzh8szqvcbkng.jpeg?q=70",
+        "category": "Home",
+        "featured": false,
+        "description": "A versatile 2-in-1 electric grill pan, perfect for grilling meats, vegetables, and even BBQ at home. It features non-stick technology and easy-to-clean surface.",
+        "specifications": {
+            "material": "Non-stick",
+            "features": "2-in-1 BBQ & Grill",
+            "dimensions": "30 x 30 x 8 cm",
+            "color": "Black",
+            "power": "1500W",
+            "weight": "2 kg"
+        }
+    },
+    {
+        "id": 50,
+        "name": "Air Fryer",
+        "price": 8199,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/air-fryer/1/w/h/black-12-1700-digital-air-fryer-oven-12l-upto-80-less-oil-usage-original-imah8ubh3e2jh2zq.jpeg?q=70",
+        "category": "Home",
+        "featured": true,
+        "description": "The Air Fryer allows you to enjoy crispy, delicious food with up to 80% less oil. It features a 12L capacity and a digital display for easy cooking control.",
+        "specifications": {
+            "brand": "Black+Decker",
+            "capacity": "12L",
+            "color": "Black",
+            "features": "Fry, Bake, Grill, Roast",
+            "power": "1700W",
+            "dimensions": "40 x 30 x 35 cm",
+            "warranty": "1 year"
+        }
+    },
+    {
+        "id": 51,
+        "name": "Fitness Tracker Watch",
+        "price": 1900,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/l/p/r/49-grey-h9-1-android-ios-melbon-yes-original-imah9c4hhbvbun82.jpeg?q=70",
+        "category": "Health",
+        "featured": true,
+        "description": "This Fitness Tracker Watch tracks your heart rate, steps, sleep patterns, and more, helping you stay fit and motivated throughout the day. It is compatible with both Android and iOS devices.",
+        "specifications": {
+            "brand": "Melbon",
+            "compatibility": "Android, iOS",
+            "battery_life": "Up to 5 days",
+            "color": "Grey",
+            "weight": "30g",
+            "water_resistance": "IP68",
+            "warranty": "1 year"
+        }
+    },
+    {
+        "id": 52,
+        "name": "Exercise Mat",
+        "price": 499,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/sport-mat/e/p/j/-original-imah94cbgghrgr3b.jpeg?q=70",
+        "category": "Health",
+        "featured": false,
+        "description": "A comfortable and durable exercise mat ideal for yoga, pilates, and general workouts. Its non-slip surface provides a stable foundation for your exercises.",
+        "specifications": {
+            "material": "PVC",
+            "dimensions": "173 x 61 cm",
+            "thickness": "6mm",
+            "color": "Blue",
+            "weight": "1.2 kg"
+        }
+    },
+    {
+        "id": 53,
+        "name": "Yoga Ball",
+        "price": 650,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/gym-ball/a/x/l/anti-burst-exercise-ball-yoga-ball-workout-ball-85-cm-red-85-st-original-imagugyeughzez2f.jpeg?q=70",
+        "category": "Health",
+        "featured": true,
+        "description": "This anti-burst yoga ball is perfect for core workouts, stability exercises, and flexibility routines. It features a high-quality material that can withstand heavy usage.",
+        "specifications": {
+            "material": "Anti-burst PVC",
+            "size": "85 cm",
+            "color": "Red",
+            "weight": "1.5 kg",
+            "maximum_weight_capacity": "150 kg"
+        }
+    },
+    {
+        "id": 54,
+        "name": "Stretch Bands",
+        "price": 540,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/fitness-band/m/r/5/resistance-tpe-bands-for-workout-pull-up-band-loop-band-heavy-original-imah8ht4jqjpzug8.jpeg?q=70",
+        "category": "Health",
+        "featured": false,
+        "description": "These resistance stretch bands are great for strength training, mobility exercises, and rehabilitation. The heavy-duty bands are durable and versatile for various exercises.",
+        "specifications": {
+            "material": "TPE (Thermoplastic Elastomer)",
+            "number_of_bands": "5",
+            "dimensions": "Various sizes (each band)",
+            "color": "Multicolor",
+            "resistance_level": "Heavy"
+        }
+    },
+    {
+        "id": 55,
+        "name": "Protein Shake Bottles",
+        "price": 279,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/bottle/t/t/b/700-gym-shaker-bottle-700ml-shaker-bottles-for-protein-shake-100-original-imagnkzwcffyvqdr.jpeg?q=70",
+        "category": "Health",
+        "featured": true,
+        "description": "This 700ml protein shake bottle is designed for mixing protein powders and other fitness drinks. The leak-proof design and easy-to-use shaker make it perfect for on-the-go use.",
+        "specifications": {
+            "material": "Plastic",
+            "capacity": "700ml",
+            "color": "Black",
+            "features": "Leak-proof, Shaker ball",
+            "weight": "150g"
+        }
+    },
+    {
+        "id": 56,
+        "name": "Blender Bottle Set",
+        "price": 797,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/bottle/z/o/y/750-stainless-steel-workout-protein-gym-shaker-bottle-with-original-imah7us74dnbghnf.jpeg?q=70",
+        "category": "Health",
+        "featured": true,
+        "description": "This set of stainless steel blender bottles is designed for mixing protein shakes, smoothies, or any fitness drink. It is durable, leak-proof, and easy to carry.",
+        "specifications": {
+            "material": "Stainless Steel",
+            "capacity": "750ml",
+            "color": "Silver",
+            "weight": "180g"
+          }
+        },
+
+
+
+        {
+          "id": 57,
+          "name": "Massage Roller",
+          "price": 286,
+          "stock": true,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/massager/7/q/u/tool-100-natural-himalayan-stone-for-face-neck-healing-ma-face-original-imah7xztzgfavggp.jpeg?q=70",
+          "category": "Health",
+          "featured": false,
+          "specifications": {
+              "material": "100% Natural Himalayan Stone",
+              "color": "Light Pink",
+              "dimensions": "6 x 4 x 2 inches",
+              "weight": "300g"
+          },
+          "description": "This massage roller is made of 100% natural Himalayan stone and is perfect for relaxing your face and neck. It helps to improve blood circulation and reduce facial tension."
+      },
+      {
+          "id": 58,
+          "name": "Hand Sanitizer",
+          "price": 99,
+          "stock": true,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/hand-wash-sanitizer/c/2/p/-original-imagp25gjbfzrzz4.jpeg?q=70",
+          "category": "Health",
+          "featured": false,
+          "specifications": {
+              "content": "100ml",
+              "ingredients": "Alcohol, Glycerin, Water",
+              "skin_type": "All Skin Types",
+              "fragrance": "Lemon"
+          },
+          "description": "This hand sanitizer is a quick and effective way to cleanse your hands, killing 99.9% of germs without the need for water."
+      },
+      {
+          "id": 59,
+          "name": "Smart Home Gym Equipment",
+          "price": 25999,
+          "stock": true,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/treadmill/o/0/6/by-cult-rpm5000-4-5hp-peak-motorized-max-weight-110kg-for-home-original-imah95mc9v3mhccy.jpeg?q=70",
+          "category": "Health",
+          "featured": true,
+          "specifications": {
+              "motor": "4.5 HP Peak Motor",
+              "max_weight": "110kg",
+              "speed_range": "0-14 km/h",
+              "dimensions": "68 x 31 x 56 inches"
+          },
+          "description": "This motorized treadmill is designed for home use, providing a smooth workout experience with adjustable speed and incline. Perfect for weight loss and fitness enthusiasts."
+      },
+      {
+          "id": 60,
+          "name": "Smart Home Fitness Mirror",
+          "price": 273,
+          "stock": true,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/normal-photo-frame/3/h/e/customized-magic-mirror-1-photo-magic-mirror-ssbgift-original-imah94fpgpyug5yz.jpeg?q=70",
+          "category": "Health",
+          "featured": true,
+          "specifications": {
+              "size": "12 x 15 inches",
+              "material": "Glass",
+              "technology": "Smart Touchscreen"
+          },
+          "description": "This fitness mirror is a magical tool to monitor your workouts. With its built-in smart technology, it helps you track fitness progress and provides real-time data during exercise."
+      },
+      {
+          "id": 61,
+          "name": "Leather Wallet",
+          "price": 625,
+          "stock": true,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/wallet-card-wallet/a/o/i/leather-wallet-1-9-hf583-croc-pln-brn-7-wallet-hammonds-original-imah9k64usq3dqxy.jpeg?q=70",
+          "category": "Accessories",
+          "featured": true,
+          "specifications": {
+              "material": "Genuine Leather",
+              "color": "Brown",
+              "dimensions": "4 x 3 inches",
+              "card_slots": "6"
+          },
+          "description": "A stylish and durable leather wallet with enough space for your cards and cash. The wallet is made of genuine leather and has a sleek, classic design."
+      },
+      {
+          "id": 62,
+          "name": "Sunglasses",
+          "price": 9971,
+          "stock": true,
+          "image": "https://rukminim2.flixcart.com/image/612/612/l2hwwi80/sunglass/x/s/k/-original-imagdtvdn6gxygnc.jpeg?q=70",
+          "category": "Accessories",
+          "featured": true,
+          "specifications": {
+              "frame_material": "Metal",
+              "lens_type": "UV Protection",
+              "color": "Black",
+              "shape": "Round"
+          },
+          "description": "These sunglasses offer ultimate protection against harmful UV rays while giving you a fashionable and trendy look. Ideal for all occasions."
+      },
+      {
+          "id": 63,
+          "name": "Backpack",
+          "price": 899,
+          "stock": true,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/backpack/c/j/m/-original-imah2uw5hxrfyjdm.jpeg?q=70",
+          "category": "Accessories",
+          "featured": false,
+          "specifications": {
+              "material": "Polyester",
+              "color": "Black",
+              "capacity": "25L",
+              "pockets": "6"
+          },
+          "description": "A durable and spacious backpack with multiple compartments for easy organization. Perfect for daily use, school, or travel."
+      },
+      {
+          "id": 64,
+          "name": "Leather Belt",
+          "price": 599,
+          "stock": true,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/belt/b/m/e/28-mdl-jafa-222-br-sty-jafa-222-br-belt-killer-original-imah82js5uyqhmtd.jpeg?q=70",
+          "category": "Accessories",
+          "featured": false,
+          "specifications": {
+              "material": "Genuine Leather",
+              "color": "Brown",
+              "size": "32 inches"
+          },
+          "description": "This classic leather belt is designed to add style and durability to your wardrobe. The high-quality material ensures long-lasting use."
+      },
+      {
+          "id": 65,
+          "name": "Smart Watch",
+          "price": 2999,
+          "stock": true,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/1/w/n/-original-imagzw979h5p5bhu.jpeg?q=70",
+          "category": "Accessories",
+          "featured": true,
+          "specifications": {
+              "battery_life": "7 days",
+              "display": "1.4 inch LCD",
+              "water_resistant": "Yes",
+              "features": "Heart Rate Monitoring, Step Counting"
+          },
+          "description": "This smart watch combines modern technology with health monitoring features. It's ideal for tracking your steps, heart rate, and staying connected throughout the day."
+      },
+      {
+          "id": 66,
+          "name": "Phone Case",
+          "price": 499,
+          "stock": true,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/cases-covers/back-cover/q/s/s/iphone-15-innopace-original-imah78y9fzstqpu8.jpeg?q=70",
+          "category": "Accessories",
+          "featured": false,
+          "specifications": {
+              "material": "Silicone",
+              "color": "Blue",
+              "compatibility": "iPhone 15"
+          },
+          "description": "This silicone phone case provides excellent protection against drops and scratches while maintaining a slim profile. Compatible with iPhone 15."
+      },
+      {
+          "id": 67,
+          "name": "Camera Bag",
+          "price": 999,
+          "stock": true,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/camera-bag/backpack/c/l/8/dslr-slr-camera-lens-shoulder-backpack-case-for-canon-nikon-original-imah3haqaezgr6pr.jpeg?q=70",
+          "category": "Accessories",
+          "featured": true,
+          "specifications": {
+              "material": "Water-Resistant Nylon",
+              "color": "Black",
+              "dimensions": "18 x 10 x 6 inches",
+              "compartments": "3"
+          },
+          "description": "This camera bag is designed to protect your DSLR or SLR camera, lenses, and accessories. Its water-resistant material ensures safety during travel."
+      },
+      {
+          "id": 68,
+          "name": "Necklace",
+          "price": 666,
+          "stock": true,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/jewellery-set/s/5/7/na-na-1-unique-603-rofarword-original-imah3t8pu9thtzcs.jpeg?q=70",
+          "category": "Jewelry",
+          "featured": true,
+          "specifications": {
+              "material": "Gold-Plated",
+              "stone": "Artificial Diamond",
+              "length": "18 inches"
+          },
+          "description": "This elegant necklace features a beautiful gold-plated chain with an artificial diamond pendant, perfect for any occasion."
+      },
+      {
+          "id": 69,
+          "name": "Earrings",
+          "price": 642,
+          "stock": true,
+          "image": "https://rukminim2.flixcart.com/image/612/612/jyg5lzk0/earring/m/6/8/ae134009s-mizorri-original-imafgz2bynqzyw6z.jpeg?q=70",
+          "category": "Jewelry",
+          "featured": false,
+          "specifications": {
+              "material": "Sterling Silver",
+              "stone": "Cubic Zirconia",
+              "color": "Silver"
+          },
+          "description": "These sterling silver earrings feature beautiful cubic zirconia stones, making them a timeless addition to your jewelry collection."
+      },
+      {
+          "id": 70,
+          "name": "Ring",
+          "price": 1000,
+          "stock": true,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-ring/s/z/s/adjustable-2-srn-018-ring-set-devora-original-imagg32389dwbaff.jpeg?q=70",
+          "category": "Jewelry",
+          "featured": true,
+          "specifications": {
+              "material": "Gold-Plated",
+              "stone": "Sapphire",
+              "size": "Adjustable"
+          },
+          "description": "This adjustable gold-plated ring features a stunning sapphire stone, perfect for any occasion or as a special gift."
+      },
+
+      {
+        "id": 71,
+        "name": "Bracelet",
+        "price": 99,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-bangle-bracelet-armlet/q/n/2/free-2-stone-beaded-bracelet-faizam-collection-original-imagqkkk3mdhyrgw.jpeg?q=70",
+        "category": "Jewelry",
+        "featured": false,
+        "specifications": {
+            "material": "Stone, Beads",
+            "color": "Multicolor",
+            "size": "Free size",
+            "occasion": "Casual, Gift"
+        },
+        "description": "This trendy beaded bracelet features a combination of stones and beads. It is free-size and perfect for casual wear or as a gift."
+    },
+    {
+        "id": 72,
+        "name": "Jewelry Box",
+        "price": 899,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/vanity-box/q/u/f/desktop-cosmetic-box-jewelry-holder-for-bathroom-vanity-and-original-imah95fapy7r2ra8.jpeg?q=70",
+        "category": "Jewelry",
+        "featured": true,
+        "specifications": {
+            "material": "Wood, Fabric",
+            "color": "Brown",
+            "size": "Medium",
+            "dimensions": "12 x 12 x 8 cm",
+            "storage_capacity": "Multiple compartments"
+        },
+        "description": "This elegant jewelry box is made from durable wood and fabric. It has multiple compartments to store your jewelry and cosmetics securely. Perfect for organizing your valuable items."
+    },
+    {
+        "id": 73,
+        "name": "Handbag",
+        "price": 999,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/hand-messenger-bag/z/o/2/dgn280-women-s-handbag-ladies-purse-27-dgn280bk-messenger-bag-original-imah9y2gwgmsup9p.jpeg?q=70",
+        "category": "Fashion",
+        "featured": true,
+        "specifications": {
+            "material": "PU Leather",
+            "color": "Black",
+            "size": "Medium",
+            "dimensions": "28 x 18 x 9 cm",
+            "strap_type": "Adjustable shoulder strap"
+        },
+        "description": "This stylish black handbag made of PU leather offers plenty of space for your essentials. It comes with an adjustable shoulder strap, making it easy to carry for any occasion."
+    },
+    {
+        "id": 74,
+        "name": "Underware",
+        "price": 350,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/brief/o/b/j/-original-imagyxgbu6gncdxw.jpeg?q=70",
+        "category": "Fashion",
+        "featured": true,
+        "specifications": {
+            "material": "Cotton, Spandex",
+            "color": "Nude",
+            "size": "M, L, XL",
+            "type": "Brief"
+        },
+        "description": "Comfortable and breathable, these underwear are made from a soft cotton-spandex blend. They come in a nude color, offering a discreet fit and all-day comfort."
+    },
+    {
+        "id": 75,
+        "name": "Jeans",
+        "price": 1515,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/jean/m/m/d/36-phjn000233-highlander-original-imah4zskewr9hwxd.jpeg?q=70",
+        "category": "Fashion",
+        "featured": false,
+        "specifications": {
+            "material": "Denim",
+            "color": "Blue",
+            "size": "30, 32, 34, 36",
+            "fit": "Slim",
+            "waist_type": "Mid-rise"
+        },
+        "description": "These high-quality denim jeans offer a slim fit with a mid-rise waist for a stylish and comfortable fit. Perfect for casual wear and any occasion."
+    },
+    {
+        "id": 76,
+        "name": "Sweater",
+        "price": 611,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/sweater/e/s/v/xl-hz-s-brown-kvetoo-original-imah4pswhmsvgrtr.jpeg?q=70",
+        "category": "Fashion",
+        "featured": true,
+        "specifications": {
+            "material": "Wool Blend",
+            "color": "Brown",
+            "size": "M, L, XL",
+            "neck_style": "Round Neck",
+            "sleeve_type": "Full Sleeves"
+        },
+        "description": "A cozy brown sweater made from a soft wool blend, perfect for the cooler seasons. It features a round neck and full sleeves for ultimate warmth and style."
+    },
+    {
+        "id": 77,
+        "name": "Socks Set",
+        "price": 297,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/sock/i/s/q/free-12-socks-for-men-combo-cotton-ankle-women-moja-sox-shocks-original-imah3e7dapjf8mgx.jpeg?q=70",
+        "category": "Fashion",
+        "featured": false,
+        "specifications": {
+            "material": "Cotton",
+            "color": "Assorted",
+            "size": "Free size",
+            "quantity": "12 Pairs"
+        },
+        "description": "This set of 12 pairs of ankle socks is made from soft cotton. The assorted colors ensure a variety of options for your daily wear needs."
+    },
+    {
+        "id": 78,
+        "name": "Sneakers Puma",
+        "price": 1912,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/o/i/3/-original-imah9mgedyae99av.jpeg?q=70",
+        "category": "Fashion",
+        "featured": true,
+        "specifications": {
+            "material": "Synthetic Leather",
+            "color": "Black",
+            "size": "7, 8, 9, 10",
+            "closure_type": "Lace-up",
+            "heel_type": "Flat"
+        },
+        "description": "These stylish Puma sneakers in black are designed for both comfort and fashion. Made with synthetic leather, they are durable, and the lace-up closure provides a secure fit."
+    },
+    {
+        "id": 79,
+        "name": "Boots",
+        "price": 1788,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/h/n/x/-original-imagg6r2qyqdz3hz.jpeg?q=70",
+        "category": "Fashion",
+        "featured": false,
+        "specifications": {
+            "material": "Leather",
+            "color": "Brown",
+            "size": "6, 7, 8, 9, 10",
+            "closure_type": "Zip-up",
+            "heel_type": "Block Heel"
+        },
+        "description": "These brown leather boots are designed for both style and durability. Featuring a block heel and zip-up closure, they are perfect for the colder months and outdoor activities."
+    },
+    {
+        "id": 80,
+        "name": "Jacket",
+        "price": 3709,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/3/m/z/m-1-no-usjck0515-u-s-polo-assn-original-imagupz5tygdnhdj.jpeg?q=70",
+        "category": "Fashion",
+        "featured": true,
+        "specifications": {
+            "material": "Polyester",
+            "color": "Navy Blue",
+            "size": "M, L, XL, XXL",
+            "fit": "Regular fit",
+            "closure_type": "Zip-up",
+            "pocket": "2 Side pockets"
+        },
+        "description": "This stylish navy blue jacket from U.S. Polo Assn. is made from durable polyester fabric. With a regular fit and zip-up closure, it is perfect for casual wear and outdoor activities."
+    },
+    {
+        "id": 81,
+        "name": "Cookbook",
+        "price": 1714,
+        "stock": false,
+        "image": "https://rukminim2.flixcart.com/image/612/612/l2hwwi80/book/8/l/r/kids-cooking-without-a-stove-a-cookbook-for-young-children-original-imagdtzvu2ddqnsb.jpeg?q=70",
+        "category": "Books",
+        "featured": false,
+        "specifications": {
+            "author": "N/A",
+            "language": "English",
+            "pages": "120",
+            "genre": "Cooking"
+        },
+        "description": "A fun and interactive cookbook for kids to make delicious recipes without using a stove. Perfect for young chefs and their parents."
+    },
+    {
+        "id": 82,
+        "name": "Novel",
+        "price": 79,
+        "stock": true,
+        "image": "https://rukminim2.flixcart.com/image/612/612/jwtkk280/book/3/2/8/heartquake-original-imafhdvhbksqadhg.jpeg?q=70",
+        "category": "Books",
+        "featured": false,
+        "specifications": {
+            "author": "N/A",
+            "language": "English",
+            "pages": "220",
+            "genre": "Romance"
+        },
+        "description": "A heartwarming novel about love, relationships, and the challenges of modern life. Perfect for readers who enjoy romance stories."
+    },
+
+
+
+
+    {
+      "id": 83,
+      "name": "Self-Help Book",  
+      "price": 359,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/book/l/z/t/rich-dad-poor-dad-original-imah9gm6zgfahjmp.jpeg?q=70",
+      "category": "Books",
+      "featured": true,
+      "description": "A motivational book that teaches you how to manage your finances and build wealth. The book emphasizes the importance of financial education and mindset transformation.",
+      "specifications": {
+        "author": "Robert Kiyosaki",
+        "publisher": "Penguin",
+        "language": "English",
+        "pages": 300,
+        "ISBN": "9781612680194",
+        "dimensions": "5.5 x 0.7 x 8.2 inches",
+        "weight": "0.5 lbs",
+        "binding": "Paperback"
+      }
+    },
+    {
+      "id": 84,
+      "name": "Art Book",
+      "price": 123,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/sketch-pad/l/f/1/50-variety-a6-sketch-book-1-4-1-5-8-variety-canvas-original-imagt93xuqmscezg.jpeg?q=70",
+      "category": "Books",
+      "featured": false,
+      "description": "An inspiring art book featuring various art techniques and creative illustrations for budding artists and art lovers. Perfect for drawing, sketching, and enhancing artistic skills.",
+      "specifications": {
+        "author": "Variety Canvas",
+        "publisher": "Variety Press",
+        "language": "English",
+        "pages": 150,
+        "ISBN": "9781598765432",
+        "dimensions": "8.5 x 0.5 x 11 inches",
+        "weight": "1 lb",
+        "binding": "Paperback"
+      }
+    },
+    {
+      "id": 85,
+      "name": "Poetry Book",
+      "price": 175,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/kjiwfbk0-0/book/s/z/s/geetanjali-original-imafz2f33ayxhjvx.jpeg?q=70",
+      "category": "Books",
+      "featured": false,
+      "description": "A timeless collection of poems by Rabindranath Tagore, focusing on themes of spirituality, human emotions, and the beauty of life. A perfect read for poetry enthusiasts.",
+      "specifications": {
+        "author": "Rabindranath Tagore",
+        "publisher": "HarperCollins",
+        "language": "English",
+        "pages": 120,
+        "ISBN": "9780670086749",
+        "dimensions": "5 x 0.4 x 8 inches",
+        "weight": "0.3 lbs",
+        "binding": "Paperback"
+      }
+    },
+    {
+      "id": 86,
+      "name": "Cookware Cookbook",
+      "price": 433,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/kzpw2vk0/book/9/o/m/i-quit-sugar-the-ultimate-chocolate-cookbook-original-imagbnrwzxryy5vw.jpeg?q=70",
+      "category": "Books",
+      "featured": true,
+      "description": "A must-have cookbook for those looking to quit sugar while still enjoying indulgent and healthy desserts, including chocolate recipes and low-sugar alternatives.",
+      "specifications": {
+        "author": "Sarah Wilson",
+        "publisher": "Penguin Random House",
+        "language": "English",
+        "pages": 320,
+        "ISBN": "9780732296756",
+        "dimensions": "7.5 x 1 x 9 inches",
+        "weight": "1.2 lbs",
+        "binding": "Hardcover"
+      }
+    },
+    {
+      "id": 87,
+      "name": "History Book",
+      "price": 3699,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/regionalbooks/b/2/r/studyiq-upsc-books-combo-history-geography-polity-economy-pyq-original-imah4rhgqz6avyps.jpeg?q=70",
+      "category": "Books",
+      "featured": false,
+      "description": "A comprehensive UPSC study guide covering key aspects of Indian history, geography, polity, and economy. Designed for students preparing for competitive exams.",
+      "specifications": {
+        "author": "Study IQ",
+        "publisher": "Study IQ Publications",
+        "language": "English",
+        "pages": 900,
+        "ISBN": "9788193985624",
+        "dimensions": "8.5 x 1.8 x 11 inches",
+        "weight": "2.5 lbs",
+        "binding": "Paperback"
+      }
+    },
+    {
+      "id": 88,
+      "name": "Business Book",
+      "price": 254,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/book/q/h/1/technical-analysis-of-the-financial-markets-a-comprehensive-original-imah9fxu9av48f4b.jpeg?q=70",
+      "category": "Books",
+      "featured": true,
+      "description": "A deep dive into technical analysis for financial markets, offering comprehensive insights on charts, patterns, and how to analyze market trends for successful investing.",
+      "specifications": {
+        "author": "John Murphy",
+        "publisher": "Wiley",
+        "language": "English",
+        "pages": 400,
+        "ISBN": "9780471689163",
+        "dimensions": "6 x 1 x 9 inches",
+        "weight": "1.4 lbs",
+        "binding": "Hardcover"
+      }
+    },
+    {
+      "id": 89,
+      "name": "Educational Book",
+      "price": 499,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/book/5/5/a/-original-imahybzkzgz4bbrh.jpeg?q=70",
+      "category": "Books",
+      "featured": false,
+      "description": "A textbook designed to enhance the learning experience for students, featuring clear explanations, detailed examples, and illustrations for better understanding of core concepts.",
+      "specifications": {
+        "author": "Various",
+        "publisher": "Educational Press",
+        "language": "English",
+        "pages": 250,
+        "ISBN": "9780190222859",
+        "dimensions": "7 x 0.8 x 10 inches",
+        "weight": "1 lb",
+        "binding": "Paperback"
+      }
+    },
+    {
+      "id": 90,
+      "name": "Thriller Novel",
+      "price": 436,
+      "stock": true,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/book/d/4/t/two-indian-girls-original-imah2ce5hmh3xmxf.jpeg?q=70",
+      "category": "Books",
+      "featured": true,
+      "description": "A fast-paced thriller novel that follows the mysterious and thrilling journey of two Indian girls as they navigate through suspenseful events.",
+      "specifications": {
+        "author": "Shweta Taneja",
+        "publisher": "HarperCollins",
+        "language": "English",
+        "pages": 350,
+        "ISBN": "9789351774363",
+        "dimensions": "5.3 x 0.9 x 8 inches",
+        "weight": "0.6 lbs",
+        "binding": "Paperback"
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+  ]
+}

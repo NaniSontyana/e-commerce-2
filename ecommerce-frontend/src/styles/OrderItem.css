@@ -1,0 +1,447 @@
+/* OrderItem.css */
+
+/* Container for each order item */
+.order-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.order-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Order item image */
+.order-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.order-item-image:hover {
+  transform: scale(1.05);
+}
+
+/* Order item details */
+.order-item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Order item name */
+.order-item-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+.order-item-name a {
+  text-decoration: none;
+}
+
+/* Ensure the Link itself has no underline */
+a.order-item-name {
+  text-decoration: none;
+}
+
+.order-item-name:hover {
+  color: #007bff;
+}
+
+/* Order item price */
+.order-item-price {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2ecc71;
+  margin: 0;
+}
+
+/* Order item status */
+.order-item-status {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* Actions container for Reorder and Wishlist buttons */
+.actions-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* Reorder button */
+.reorder-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reorder-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Wishlist actions */
+.wishlist-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.add-wishlist-btn,
+.remove-wishlist-btn {
+  padding: 8px 16px;
+  margin-top: 13px;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-wishlist-btn {
+  background-color: #fff;
+  color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+.add-wishlist-btn:hover {
+  background-color: #ff4d4f;
+  color: #fff;
+}
+
+.remove-wishlist-btn {
+  background-color: #fff;
+  color: #666;
+  border-color: #666;
+}
+
+.remove-wishlist-btn:hover {
+  background-color: #666;
+  color: #fff;
+}
+
+.wishlist-message {
+  font-size: 12px;
+  color: #2ecc71;
+  font-weight: 500;
+}
+
+/* Review section */
+.review-section {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.review-section button {
+  padding: 6px 12px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.review-section button:first-of-type {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.review-section button:first-of-type:hover {
+  background-color: #0056b3;
+}
+
+.review-section button:last-of-type {
+  background-color: #ff4d4f;
+  color: #fff;
+}
+
+.review-section button:last-of-type:hover {
+  background-color: #e63946;
+}
+
+/* Review display */
+.review-display {
+  margin-bottom: 10px;
+}
+
+.review-display p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.review-display p:first-child {
+  font-weight: 500;
+  color: #f39c12;
+}
+
+/* Review form */
+.review-form {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.review-form h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.rating-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.rating-dropdown {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rating-dropdown:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.review-form textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.review-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.review-form .error-message {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.review-form .success-message {
+  color: #2ecc71;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.review-form button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.review-form button:first-of-type {
+  background-color: #28a745;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.review-form button:first-of-type:hover {
+  background-color: #218838;
+}
+
+.review-form button:first-of-type:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.review-form button:last-of-type {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.review-form button:last-of-type:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .order-item {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .order-item-image {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .order-item-details {
+    align-items: center;
+    text-align: center;
+  }
+
+  .order-item-name {
+    font-size: 16px;
+  }
+
+  .order-item-price {
+    font-size: 14px;
+  }
+
+  .order-item-status {
+    font-size: 12px;
+  }
+
+  .actions-container {
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .reorder-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .wishlist-actions {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .add-wishlist-btn,
+  .remove-wishlist-btn {
+    font-size: 13px;
+    width: 120px;
+    height: 35px;
+    padding: 6px 12px;
+  }
+
+  .wishlist-message {
+    font-size: 10px;
+  }
+
+  .review-section button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .review-form {
+    padding: 10px;
+  }
+
+  .review-form h4 {
+    font-size: 14px;
+  }
+
+  .rating-label {
+    font-size: 13px;
+  }
+
+  .rating-dropdown {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .review-form textarea {
+    font-size: 12px;
+    min-height: 60px;
+  }
+
+  .review-form button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-item {
+    padding: 10px;
+  }
+
+  .order-item-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .order-item-name {
+    font-size: 14px;
+  }
+
+  .order-item-price {
+    font-size: 12px;
+  }
+
+  .order-item-status {
+    font-size: 10px;
+  }
+
+  .actions-container {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .reorder-btn {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .wishlist-actions {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .add-wishlist-btn,
+  .remove-wishlist-btn {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+}

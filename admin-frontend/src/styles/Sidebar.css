@@ -1,0 +1,222 @@
+/* admin-frontend/src/styles/Sidebar.css */
+:root {
+  --sidebar-width: 250px;
+  --sidebar-mobile-width: 70px;
+}
+
+.sidebar-toggle {
+  display: none; /* Hidden by default on desktop */
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #00d4ff;
+  color: #1a1a2e;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1001;
+  font-size: 1.5rem;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background: #16213e;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+  transition: width 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Show sidebar when open */
+}
+
+.sidebar h3 {
+  color: #00d4ff;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar a,
+.sidebar button {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  background: #0f3460;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding doesn't add to width */
+}
+
+.sidebar button {
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar .icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.sidebar .text {
+  flex: 1;
+}
+
+.sidebar a:hover,
+.sidebar button:hover {
+  background: #00d4ff;
+  color: #1a1a2e;
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  :root {
+    --sidebar-width: 220px;
+  }
+  .sidebar {
+    padding: 15px;
+  }
+  .sidebar h3 {
+    font-size: 1.4rem;
+  }
+  .sidebar a,
+  .sidebar button {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 200px;
+  }
+  .sidebar {
+    padding: 12px;
+  }
+  .sidebar h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block; /* Show toggle button on mobile */
+  }
+  :root {
+    --sidebar-width: var(--sidebar-mobile-width);
+    --sidebar-mobile-width: 70px;
+  }
+  .sidebar {
+    width: var(--sidebar-mobile-width);
+    padding: 10px;
+    transform: translateX(-100%); /* Hide sidebar by default on mobile */
+  }
+  .sidebar.open {
+    transform: translateX(0); /* Slide in when open */
+  }
+  .sidebar h3 {
+    font-size: 0;
+    background: url('https://via.placeholder.com/40') no-repeat center;
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  .sidebar a,
+  .sidebar button {
+    justify-content: center;
+    padding: 10px;
+  }
+  .sidebar .text {
+    display: none; /* Hide text on mobile */
+  }
+  .sidebar .icon {
+    margin-right: 0;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --sidebar-mobile-width: 60px;
+  }
+  .sidebar {
+    width: var(--sidebar-mobile-width);
+    padding: 5px;
+  }
+  .sidebar h3 {
+    height: 35px;
+    width: 35px;
+  }
+  .sidebar a,
+  .sidebar button {
+    padding: 8px;
+  }
+  .sidebar .icon {
+    font-size: 1.3rem;
+  }
+}
+
+/* Adjust main content wrapper */
+.app-wrapper {
+  margin-left: var(--sidebar-width);
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+  box-sizing: border-box; /* Ensure padding/margin doesn't cause overflow */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: calc(100% - var(--sidebar-width)); /* Ensure content fits remaining space */
+}
+
+.app-wrapper.shifted {
+  margin-left: var(--sidebar-mobile-width); /* Adjust when sidebar is open on mobile */
+  width: calc(100% - var(--sidebar-mobile-width));
+}
+
+@media (max-width: 768px) {
+  .app-wrapper {
+    margin-left: 0; /* Full width when sidebar is hidden */
+    width: 100%;
+  }
+  .app-wrapper.shifted {
+    margin-left: var(--sidebar-mobile-width);
+    width: calc(100% - var(--sidebar-mobile-width));
+  }
+}
+
+/* Ensure no extra scrolling */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow at root level */
+}
+
+.dashboard-content,
+.product-management-container {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}

@@ -1,0 +1,267 @@
+/* ecommerce-frontend/src/styles/CartItem.css */
+.cart-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  gap: 15px;
+}
+
+.cart-item-checkbox {
+  margin-top: 5px;
+}
+
+.cart-item-image {
+  width: 100px;
+  cursor: pointer;
+}
+
+.cart-item-image img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+.cart-item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cart-item-details h5 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #212121;
+  margin: 0;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.cart-item-details h5:hover {
+  color: #2874f0;
+}
+
+.seller-info {
+  font-size: 12px;
+  color: #878787;
+  margin: 0;
+}
+
+.out-of-stock {
+  font-size: 14px;
+  color: #ff6161;
+  font-weight: 500;
+  margin: 0;
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.original-price {
+  font-size: 14px;
+  color: #878787;
+  text-decoration: line-through;
+}
+
+.discount {
+  font-size: 14px;
+  color: #388e3c;
+}
+
+.quantity-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quantity-section button {
+  width: 30px;
+  height: 30px;
+  background-color: #f0f0f0;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-section button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.quantity-section span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.cart-item .cart-item-actions {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: flex !important;
+}
+
+.cart-item .action-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2874f0;
+  cursor: pointer;
+  padding: 0;
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: inline-block !important; /* Use inline-block for button */
+  position: relative; /* Ensure positioning context */
+}
+
+/* Prevent pseudo-elements from adding duplicate content */
+.cart-item .action-btn::before,
+.cart-item .action-btn::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Ensure hover doesn’t create duplicates */
+.cart-item:hover .cart-item-actions {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: flex !important;
+}
+
+.cart-item:hover .action-btn {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: inline-block !important;
+  color: #1e5db1; /* Maintain hover color change */
+}
+
+/* Responsive Styles */
+
+/* Mobile Devices (Below 576px) */
+@media (max-width: 575.98px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cart-item-image img {
+    height: 80px;
+  }
+
+  .cart-item-details h5 {
+    font-size: 14px;
+    -webkit-line-clamp: 1;
+  }
+
+  .seller-info {
+    font-size: 11px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+
+  .original-price,
+  .discount {
+    font-size: 12px;
+  }
+
+  .quantity-section {
+    justify-content: center;
+  }
+
+  .cart-item-actions {
+    justify-content: center;
+  }
+}
+
+/* Medium Devices (576px to 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .cart-item {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .cart-item-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .cart-item-image img {
+    height: 90px;
+  }
+
+  .cart-item-details h5 {
+    font-size: 15px;
+  }
+
+  .seller-info {
+    font-size: 12px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .original-price,
+  .discount {
+    font-size: 13px;
+  }
+}
+
+/* Desktop Devices (992px and above) */
+@media (min-width: 992px) {
+  .cart-item {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .cart-item-image {
+    width: 100px;
+  }
+
+  .cart-item-details h5 {
+    font-size: 16px;
+  }
+}
+
+/* Large Desktop (1200px and above) */
+@media (min-width: 1200px) {
+  .cart-item-image {
+    width: 120px;
+  }
+
+  .cart-item-details h5 {
+    font-size: 16px;
+  }
+}
