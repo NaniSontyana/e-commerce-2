@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import '../styles/CartItem.css';
 
 function CartItem({ item, removeFromCart, updateQuantity, navigate, isSelected, onSelect }) {
-  const { user, logout } = useAuth();
+  const { logout } = useAuth();
   const [isRemoving, setIsRemoving] = useState(false);
   const [isUpdating, setIsUpdating] = useState(false);
 

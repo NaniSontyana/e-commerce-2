@@ -48,18 +48,6 @@ function Cart() {
     }
   };
 
-  const handleClearCart = async () => {
-    try {
-      await clearCart();
-      setSelectedItems([]);
-    } catch (err) {
-      toast.error('Failed to clear cart.', {
-        position: 'top-right',
-        autoClose: 3000,
-      });
-    }
-  };
-
   const handleBulkRemove = async () => {
     try {
       for (const itemId of selectedItems) {

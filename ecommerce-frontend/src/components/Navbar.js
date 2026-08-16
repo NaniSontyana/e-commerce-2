@@ -25,9 +25,6 @@ function Navigation() {
     : 0;
 
   const isHomeRoute = location.pathname === "/";
-  const isBlueBackgroundRoute =
-    ["/products", "/orders"].includes(location.pathname) ||
-    location.pathname.startsWith("/product/");
 
   useEffect(() => {
     const handleResize = () => {
