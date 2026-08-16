@@ -11,7 +11,17 @@ const app = express();
 
 // Configure CORS
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:5002', 'http://localhost:5001', 'http://localhost:5003', 'http://localhost:5004', 'https://backend-ps76.onrender.com', 'https://frontend-8uy4.onrender.com', 'https://admin-frontend-o3u7.onrender.com'],
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:5002',
+    'http://localhost:5001',
+    'http://localhost:5003',
+    'http://localhost:5004',
+    'https://backend-ps76.onrender.com',
+    'https://frontend-8uy4.onrender.com',
+    'https://admin-frontend-o3u7.onrender.com',
+    'https://e-commerce-2-gbm9.onrender.com'
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
@@ -23,19 +33,26 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/uploads/avatars', express.static(path.join(__dirname, 'uploads/avatars')));
 
 // Set BASE_URL environment variable
-process.env.BASE_URL = process.env.BASE_URL || (process.env.RENDER ? 'https://backend-ps76.onrender.com' : 'http://localhost:5001');
+process.env.BASE_URL = process.env.BASE_URL || (process.env.RENDER ? 'https://e-commerce-2-gbm9.onrender.com' : 'http://localhost:5001');
 
 // Configure Cloudinary
 if (!process.env.CLOUDINARY_URL) {
-  console.error('CLOUDINARY_URL not found in .env file');
+  console.error('CLOUDINARY_URL not found in environment variables');
   process.exit(1);
 }
-console.log('Cloudinary URL loaded:', process.env.CLOUDINARY_URL);
+console.log('Cloudinary URL loaded successfully');
 
-// MongoDB Connection (removed deprecated options)
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('MongoDB connected'))
-  .catch((err) => console.log('MongoDB connection error:', err));
+// Resolve MONGO_URI (support both MONGO_URI and Mongo_URI)
+const mongoUri = process.env.MONGO_URI || process.env.Mongo_URI;
+
+if (!mongoUri) {
+  console.error('CRITICAL ERROR: MONGO_URI environment variable is missing in Render dashboard environment settings!');
+} else {
+  // MongoDB Connection
+  mongoose.connect(mongoUri)
+    .then(() => console.log('MongoDB connected successfully'))
+    .catch((err) => console.log('MongoDB connection error:', err));
+}
 
 // Routes
 const authRoutes = require('./routes/auth');

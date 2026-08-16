@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -17,15 +17,8 @@ function Wishlist() {
   const [filterCategory, setFilterCategory] = useState('All');
   const [filterPrice, setFilterPrice] = useState('All');
 
-  useEffect(() => {
-    if (!authLoading && !user) {
-      navigate('/login');
-    } else if (user && user._id) {
-      fetchWishlist();
-    }
-  }, [user, authLoading, navigate]);
-
-  const fetchWishlist = async () => {
+  const fetchWishlist = useCallback(async () => {
+    if (!user || !user._id) return;
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
@@ -46,7 +39,15 @@ function Wishlist() {
       }
       setLoading(false);
     }
-  };
+  }, [user, logout, navigate]);
+
+  useEffect(() => {
+    if (!authLoading && !user) {
+      navigate('/login');
+    } else if (user && user._id) {
+      fetchWishlist();
+    }
+  }, [user, authLoading, navigate, fetchWishlist]);
 
   const handleRemoveFromWishlist = async (wishlistId) => {
     try {

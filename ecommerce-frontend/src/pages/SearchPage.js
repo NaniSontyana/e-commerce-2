@@ -4,6 +4,51 @@ import { useProducts } from '../context/ProductContext';
 import { useAuth } from '../context/AuthContext';
 import '../styles/SearchPage.css';
 
+// Category hierarchy with images for main categories
+const categoryHierarchy = {
+  Fashion: {
+    image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80',
+    Men: [
+      'Top Wear', 'Bottom Wear', 'Casual Shoes', 'Watches', 'Ethnic', 'Sports Shoes',
+      'Luggage', 'Trimmers', 'Essentials', 'Men Grooming'
+    ],
+    Women: ['Dresses', 'Top Wear', 'Footwear', 'Jewelry', 'Handbags', 'Accessories'],
+    Beauty: ['Skincare', 'Makeup', 'Haircare', 'Fragrances']
+  },
+  Gadgets: {
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80',
+    Accessories: ['Phone Cases', 'Chargers', 'Headphones'],
+    SmartDevices: ['Smartwatches', 'Speakers', 'Cameras']
+  },
+  Electronics: {
+    image: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80',
+    Audio: ['Headphones', 'Speakers', 'Earphones'],
+    Computing: ['Laptops', 'Desktops', 'Monitors']
+  },
+  Home: {
+    image: 'https://img.freepik.com/premium-photo/directly-shot-shopping-cart-laptop_1048944-25258203.jpg?uid=R187650059&ga=GA1.1.982110684.1717591516&semt=ais_hybrid&w=740',
+    Decor: ['Wall Art', 'Rugs', 'Lighting'],
+    Kitchen: ['Appliances', 'Utensils', 'Cookware']
+  },
+  Mobiles: {
+    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80',
+    Smartphones: ['iPhone', 'Samsung', 'Xiaomi', 'OnePlus', 'Google Pixel','Realme','Redmi'],
+    FeaturePhones: ['Nokia', 'JioPhone'],
+    Tablets: ['iPad', 'Samsung Galaxy Tab', 'Lenovo Tab'],
+    Accessories: ['Chargers', 'Earphones', 'Cases', 'Screen Protectors','Power Banks'],
+  },
+  Appliances: {
+    image: 'https://img.freepik.com/free-vector/household-appliances-realistic-composition_1284-65307.jpg?uid=R187650059&ga=GA1.1.982110684.1717591516&semt=ais_hybrid&w=740',
+    Small: ['Microwave', 'Toaster', 'Blender'],
+    Large: ['Refrigerator', 'Washing Machine', 'Air Conditioner']
+  },
+  Furniture: {
+    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80',
+    Living: ['Sofas', 'Tables', 'Chairs'],
+    Bedroom: ['Beds', 'Wardrobes', 'Mattresses']
+  }
+};
+
 function SearchPage() {
   const { products, loading: productsLoading, error: productsError } = useProducts();
   const { user } = useAuth();
@@ -16,53 +61,6 @@ function SearchPage() {
   const [popularProducts, setPopularProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 8;
-
-  // Category hierarchy with images for main categories
-  const categoryHierarchy = {
-    Fashion: {
-      image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80',
-      Men: [
-        'Top Wear', 'Bottom Wear', 'Casual Shoes', 'Watches', 'Ethnic', 'Sports Shoes',
-        'Luggage', 'Trimmers', 'Essentials', 'Men Grooming'
-      ],
-      Women: ['Dresses', 'Top Wear', 'Footwear', 'Jewelry', 'Handbags', 'Accessories'],
-      Beauty: ['Skincare', 'Makeup', 'Haircare', 'Fragrances']
-    },
-    Gadgets: {
-      image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80',
-      Accessories: ['Phone Cases', 'Chargers', 'Headphones'],
-      SmartDevices: ['Smartwatches', 'Speakers', 'Cameras']
-    },
-    Electronics: {
-      image: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80',
-      Audio: ['Headphones', 'Speakers', 'Earphones'],
-      Computing: ['Laptops', 'Desktops', 'Monitors']
-    },
-    Home: {
-      image: 'https://img.freepik.com/premium-photo/directly-shot-shopping-cart-laptop_1048944-25258203.jpg?uid=R187650059&ga=GA1.1.982110684.1717591516&semt=ais_hybrid&w=740',
-      Decor: ['Wall Art', 'Rugs', 'Lighting'],
-      Kitchen: ['Appliances', 'Utensils', 'Cookware']
-    },
-    Mobiles: {
-      image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80',
-
-          Smartphones: ['iPhone', 'Samsung', 'Xiaomi', 'OnePlus', 'Google Pixel','Realme','Redmi'],
-    FeaturePhones: ['Nokia', 'JioPhone'],
-    Tablets: ['iPad', 'Samsung Galaxy Tab', 'Lenovo Tab'],
-    Accessories: ['Chargers', 'Earphones', 'Cases', 'Screen Protectors','Power Banks'],
-
-    },
-    Appliances: {
-      image: 'https://img.freepik.com/free-vector/household-appliances-realistic-composition_1284-65307.jpg?uid=R187650059&ga=GA1.1.982110684.1717591516&semt=ais_hybrid&w=740',
-      Small: ['Microwave', 'Toaster', 'Blender'],
-      Large: ['Refrigerator', 'Washing Machine', 'Air Conditioner']
-    },
-    Furniture: {
-      image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80',
-      Living: ['Sofas', 'Tables', 'Chairs'],
-      Bedroom: ['Beds', 'Wardrobes', 'Mattresses']
-    }
-  };
 
   // Load recent searches from localStorage
   useEffect(() => {

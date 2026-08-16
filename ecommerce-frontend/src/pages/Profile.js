@@ -36,7 +36,7 @@ function Profile() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [isEditingProfile, setIsEditingProfile] = useState(false);
-  const [isEditingShipping, setIsEditingShipping] = useState(false);
+  const [, setIsEditingShipping] = useState(false);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
   const [previewAvatar, setPreviewAvatar] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
@@ -54,13 +54,6 @@ function Profile() {
   const [activeSection, setActiveSection] = useState(null);
 
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
-
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   useEffect(() => {
     if (authLoading) {

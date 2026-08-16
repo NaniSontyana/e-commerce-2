@@ -273,7 +273,7 @@ function Products() {
     }
   }, [products, loading]);
 
-  const correctSearchTerm = (query) => {
+  const correctSearchTerm = useCallback((query) => {
     const productNames = products.map(p => p.name.toLowerCase());
     const words = query.toLowerCase().split(' ');
     let closestMatch = '';
@@ -291,7 +291,7 @@ function Products() {
       }
     }
     return closestMatch ? closestMatch.charAt(0).toUpperCase() + closestMatch.slice(1) : '';
-  };
+  }, [products]);
 
   const levenshteinDistance = (a, b) => {
     const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
@@ -453,7 +453,7 @@ function Products() {
 
     setFiltered(updatedProducts);
     setVisibleCount(12);
-  }, [products, searchQuery, categoryFilter, priceRange, inStockOnly, ratingFilter, sort, productRatings, recentSearches, quickFilters, user, selectedBrand, selectedColor, selectedSize, selectedTags]);
+  }, [products, searchQuery, categoryFilter, priceRange, inStockOnly, ratingFilter, sort, productRatings, recentSearches, quickFilters, user, selectedBrand, selectedColor, selectedSize, selectedTags, correctSearchTerm]);
 
   useEffect(() => {
     localStorage.setItem('sort', sort);
@@ -474,11 +474,13 @@ function Products() {
     };
     const filterString = JSON.stringify(currentFilters);
     if (categoryFilter || priceRange[0] !== 0 || priceRange[1] !== maxPrice || ratingFilter || inStockOnly) {
-      const updatedRecentFilters = recentFilters.filter(f => JSON.stringify(f) !== filterString);
-      updatedRecentFilters.unshift(currentFilters);
-      const limitedFilters = updatedRecentFilters.slice(0, 5);
-      setRecentFilters(limitedFilters);
-      localStorage.setItem('recentFilters', JSON.stringify(limitedFilters));
+      setRecentFilters(prevRecent => {
+        const updatedRecentFilters = prevRecent.filter(f => JSON.stringify(f) !== filterString);
+        updatedRecentFilters.unshift(currentFilters);
+        const limitedFilters = updatedRecentFilters.slice(0, 5);
+        localStorage.setItem('recentFilters', JSON.stringify(limitedFilters));
+        return limitedFilters;
+      });
     }
   }, [categoryFilter, priceRange, ratingFilter, inStockOnly, maxPrice]);
 
