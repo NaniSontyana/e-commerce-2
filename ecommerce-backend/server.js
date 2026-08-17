@@ -62,8 +62,8 @@ if (!process.env.CLOUDINARY_URL) {
 }
 console.log('Cloudinary URL loaded successfully');
 
-// Resolve MONGO_URI (support both MONGO_URI and Mongo_URI)
-const mongoUri = process.env.MONGO_URI || process.env.Mongo_URI;
+// Resolve MONGO_URI (support MONGO_URI, Mongo_URI, mongo_uri, MONGO_URL, Mongo_URL, mongo_url)
+const mongoUri = process.env.MONGO_URI || process.env.Mongo_URI || process.env.mongo_uri || process.env.MONGO_URL || process.env.Mongo_URL || process.env.mongo_url;
 
 if (!mongoUri) {
   console.error('CRITICAL ERROR: MONGO_URI environment variable is missing in Render dashboard environment settings!');
