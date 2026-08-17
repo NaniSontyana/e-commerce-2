@@ -18,7 +18,8 @@ module.exports = async (req, res, next) => {
     }
 
     // Verify token
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const jwtSecret = process.env.JWT_SECRET || process.env.Jwt_Secret || 'ReB1GbhL1I';
+    const decoded = jwt.verify(token, jwtSecret);
     console.log('Decoded token in auth middleware:', decoded); // Debug log
     if (!decoded.id && !decoded._id) {
       return res.status(401).json({ message: 'Invalid token: user ID not found in token' });
