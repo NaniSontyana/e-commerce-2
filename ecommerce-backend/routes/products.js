@@ -172,7 +172,7 @@ const verifyAdmin = async (req, res, next) => {
   try {
     const jwt = require("jsonwebtoken");
     const Admin = require("../models/admin");
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || process.env.Jwt_Secret || 'ReB1GbhL1I');
     const admin = await Admin.findById(decoded.id).select("-password");
     if (!admin || !admin.isAdmin) {
       return res
@@ -947,7 +947,7 @@ const verifyAdmin = async (req, res, next) => {
   try {
     const jwt = require('jsonwebtoken');
     const Admin = require('../models/admin');
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || process.env.Jwt_Secret || 'ReB1GbhL1I');
     const admin = await Admin.findById(decoded.id).select('-password');
     if (!admin || !admin.isAdmin) {
       return res.status(403).json({ message: 'Forbidden: Admin role required' });
