@@ -26,6 +26,73 @@ const sizeOptionsMap = {
   default: [],
 };
 
+const categories = {
+  Fashion: {
+    Men: [
+      "Top Wear",
+      "Bottom Wear",
+      "Casual Shoes",
+      "Watches",
+      "Ethnic",
+      "Sports Shoes",
+      "Luggage",
+      "Accessories",
+      "Trimmers",
+      "Essentials",
+      "Men Grooming",
+    ],
+    Women: [
+      "Dresses",
+      "Top Wear",
+      "Bottom Wear",
+      "Footwear",
+      "Beauty",
+      "Luggage & Bags",
+      "Ethnic",
+      "Watches & Shades",
+      "Accessories",
+      "Essentials",
+    ],
+    Beauty: ["Swiss Beauty", "Sugar Pop Insights", "Renee"],
+  },
+  Gadgets: {
+    Accessories: ["Phone Cases", "Chargers", "Headphones"],
+    SmartDevices: ["Smartwatches", "Speakers", "Cameras"],
+  },
+  Furniture: {
+    Living: ["Sofas", "Tables", "Chairs"],
+    Bedroom: ["Beds", "Wardrobes", "Mattresses"],
+  },
+  Mobiles: {
+    Smartphones: [
+      "iPhone",
+      "Samsung",
+      "Xiaomi",
+      "OnePlus",
+      "Google Pixel",
+      "Realme",
+      "Redmi",
+    ],
+    FeaturePhones: ["Nokia", "JioPhone"],
+    Tablets: ["iPad", "Samsung Galaxy Tab", "Lenovo Tab"],
+    Accessories: [
+      "Chargers",
+      "Earphones",
+      "Cases",
+      "Screen Protectors",
+      "Power Banks",
+    ],
+  },
+  Appliances: {
+    Small: ["Microwave", "Toaster", "Blender"],
+    Large: ["Refrigerator", "Washing Machine", "Air Conditioner"],
+  },
+  Beauty: [],
+  Home: [],
+  "Toys & Baby": [],
+  Sports: [],
+};
+
 function ProductManagement() {
   const [totalPages, setTotalPages] = useState(1);
   const [products, setProducts] = useState([]);
@@ -82,73 +149,6 @@ function ProductManagement() {
   const [selectedVariant, setSelectedVariant] = useState({});
   const productsPerPage = 10;
   const navigate = useNavigate();
-
-  const categories = {
-    Fashion: {
-      Men: [
-        "Top Wear",
-        "Bottom Wear",
-        "Casual Shoes",
-        "Watches",
-        "Ethnic",
-        "Sports Shoes",
-        "Luggage",
-        "Accessories",
-        "Trimmers",
-        "Essentials",
-        "Men Grooming",
-      ],
-      Women: [
-        "Dresses",
-        "Top Wear",
-        "Bottom Wear",
-        "Footwear",
-        "Beauty",
-        "Luggage & Bags",
-        "Ethnic",
-        "Watches & Shades",
-        "Accessories",
-        "Essentials",
-      ],
-      Beauty: ["Swiss Beauty", "Sugar Pop Insights", "Renee"],
-    },
-    Gadgets: {
-      Accessories: ["Phone Cases", "Chargers", "Headphones"],
-      SmartDevices: ["Smartwatches", "Speakers", "Cameras"],
-    },
-    Furniture: {
-      Living: ["Sofas", "Tables", "Chairs"],
-      Bedroom: ["Beds", "Wardrobes", "Mattresses"],
-    },
-    Mobiles: {
-      Smartphones: [
-        "iPhone",
-        "Samsung",
-        "Xiaomi",
-        "OnePlus",
-        "Google Pixel",
-        "Realme",
-        "Redmi",
-      ],
-      FeaturePhones: ["Nokia", "JioPhone"],
-      Tablets: ["iPad", "Samsung Galaxy Tab", "Lenovo Tab"],
-      Accessories: [
-        "Chargers",
-        "Earphones",
-        "Cases",
-        "Screen Protectors",
-        "Power Banks",
-      ],
-    },
-    Appliances: {
-      Small: ["Microwave", "Toaster", "Blender"],
-      Large: ["Refrigerator", "Washing Machine", "Air Conditioner"],
-    },
-    Beauty: [],
-    Home: [],
-    "Toys & Baby": [],
-    Sports: [],
-  };
 
   const bladeMaterialOptions = ["Ceramic", "Stainless Steel", "Titanium"];
   const dealTagOptions = ["Hot Deals", "Low Price Drop", ""];
@@ -280,7 +280,6 @@ function ProductManagement() {
     filterOffer,
     currentPage,
     productsPerPage,
-    categories,
     navigate,
   ]);
 
