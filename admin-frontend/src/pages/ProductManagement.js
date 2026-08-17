@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { CSVLink } from "react-csv";
@@ -12,6 +12,19 @@ try {
   console.warn("Papa Parse not found. Bulk upload will be disabled.", e);
   Papa = null;
 }
+
+const sizeOptionsMap = {
+  "Top Wear": ["S", "M", "L", "XL", "XXL"],
+  Dresses: ["S", "M", "L", "XL", "XXL"],
+  "Bottom Wear": ["28", "30", "32", "34", "36"],
+  "Casual Shoes": ["6", "7", "8", "9", "10", "11", "12"],
+  "Sports Shoes": ["6", "7", "8", "9", "10", "11", "12"],
+  Footwear: ["6", "7", "8", "9", "10"],
+  Essentials: ["Free", "XS", "S", "M", "L"],
+  Luggage: ["55cm (Small)", "65cm (Medium)", "75cm (Large)"],
+  "Luggage & Bags": ["55cm (Small)", "65cm (Medium)", "75cm (Large)"],
+  default: [],
+};
 
 function ProductManagement() {
   const [totalPages, setTotalPages] = useState(1);
@@ -137,19 +150,6 @@ function ProductManagement() {
     Sports: [],
   };
 
-  const sizeOptionsMap = {
-    "Top Wear": ["S", "M", "L", "XL", "XXL"],
-    Dresses: ["S", "M", "L", "XL", "XXL"],
-    "Bottom Wear": ["28", "30", "32", "34", "36"],
-    "Casual Shoes": ["6", "7", "8", "9", "10", "11", "12"],
-    "Sports Shoes": ["6", "7", "8", "9", "10", "11", "12"],
-    Footwear: ["6", "7", "8", "9", "10"],
-    Essentials: ["Free", "XS", "S", "M", "L"],
-    Luggage: ["55cm (Small)", "65cm (Medium)", "75cm (Large)"],
-    "Luggage & Bags": ["55cm (Small)", "65cm (Medium)", "75cm (Large)"],
-    default: [],
-  };
-
   const bladeMaterialOptions = ["Ceramic", "Stainless Steel", "Titanium"];
   const dealTagOptions = ["Hot Deals", "Low Price Drop", ""];
   const packOfOptions = ["1", "2", "3"];
@@ -173,59 +173,7 @@ function ProductManagement() {
     }
   };
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (!token || isTokenExpired(token)) {
-      toast.error("Session expired. Please log in again.");
-      localStorage.removeItem("token");
-      navigate("/login");
-    } else {
-      fetchProducts(true);
-    }
-  }, [navigate]);
-
-  useEffect(() => {
-    setCurrentPage(1);
-    setShouldFetch(true);
-  }, [
-    debouncedSearchQuery,
-    filterCategory,
-    filterSubcategory,
-    filterNestedCategory,
-    filterPriceMin,
-    filterPriceMax,
-    filterStock,
-    filterOffer,
-  ]);
-
-  useEffect(() => {
-    if (shouldFetch) {
-      fetchProducts(true);
-    }
-  }, [currentPage, shouldFetch]);
-
-  useEffect(() => {
-    const nestedCat = formData.nestedCategory || "default";
-    setSizeOptions(sizeOptionsMap[nestedCat] || sizeOptionsMap.default);
-    setFormData((prev) => ({ ...prev, sizes: [] }));
-  }, [formData.nestedCategory]);
-
-  useEffect(() => {
-    return () => {
-      if (
-        formData.currentMainImage &&
-        typeof formData.currentMainImage !== "string"
-      ) {
-        URL.revokeObjectURL(formData.currentMainImage);
-      }
-      formData.newImages.forEach((image) => {
-        if (typeof image.preview === "string")
-          URL.revokeObjectURL(image.preview);
-      });
-    };
-  }, [formData.currentMainImage, formData.newImages]);
-
-  const fetchProducts = async (showLoading = false) => {
+  const fetchProducts = useCallback(async (showLoading = false) => {
     if (showLoading) setLoading(true);
     try {
       const token = localStorage.getItem("token");
@@ -248,7 +196,7 @@ function ProductManagement() {
       });
 
       const res = await axios.get(
-        `https://backend-ps76.onrender.com/api/admin/products?${params.toString()}`,
+        `https://e-commerce-2-gbm9.onrender.com/api/admin/products?${params.toString()}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -257,11 +205,9 @@ function ProductManagement() {
       const productData = res.data.products || res.data || [];
       const initializedProducts = Array.isArray(productData)
         ? productData.map((product) => {
-            // Use values from the API response, fall back to empty strings if undefined
             let subcategory = product.subcategory || "";
             let nestedCategory = product.nestedCategory || "";
 
-            // Only apply defaulting if the category structure exists and the field is invalid
             if (
               product.category &&
               categories[product.category] &&
@@ -269,9 +215,6 @@ function ProductManagement() {
               subcategory &&
               (!subcategory || !Object.keys(categories[product.category]).includes(subcategory))
             ) {
-              console.warn(
-                `Invalid or missing subcategory for product ${product._id} (category: ${product.category}). Defaulting to first available subcategory.`
-              );
               subcategory = Object.keys(categories[product.category])[0] || "";
             }
 
@@ -284,9 +227,6 @@ function ProductManagement() {
               nestedCategory &&
               (!nestedCategory || !categories[product.category][subcategory].includes(nestedCategory))
             ) {
-              console.warn(
-                `Invalid or missing nested category for product ${product._id} (category: ${product.category}, subcategory: ${subcategory}). Defaulting to first available nested category. Received: ${nestedCategory}`
-              );
               nestedCategory = categories[product.category][subcategory][0] || "";
             }
 
@@ -329,19 +269,76 @@ function ProductManagement() {
     } finally {
       if (showLoading) setLoading(false);
     }
-  };
+  }, [
+    debouncedSearchQuery,
+    filterCategory,
+    filterSubcategory,
+    filterNestedCategory,
+    filterPriceMin,
+    filterPriceMax,
+    filterStock,
+    filterOffer,
+    currentPage,
+    productsPerPage,
+    categories,
+    navigate,
+  ]);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token || isTokenExpired(token)) {
+      toast.error("Session expired. Please log in again.");
+      localStorage.removeItem("token");
+      navigate("/login");
+    } else {
+      fetchProducts(true);
+    }
+  }, [navigate, fetchProducts]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+    setShouldFetch(true);
+  }, [
+    debouncedSearchQuery,
+    filterCategory,
+    filterSubcategory,
+    filterNestedCategory,
+    filterPriceMin,
+    filterPriceMax,
+    filterStock,
+    filterOffer,
+  ]);
+
+  useEffect(() => {
+    if (shouldFetch) {
+      fetchProducts(true);
+    }
+  }, [currentPage, shouldFetch, fetchProducts]);
+
+  useEffect(() => {
+    const nestedCat = formData.nestedCategory || "default";
+    setSizeOptions(sizeOptionsMap[nestedCat] || sizeOptionsMap.default);
+    setFormData((prev) => ({ ...prev, sizes: [] }));
+  }, [formData.nestedCategory]);
+
+  useEffect(() => {
+    return () => {
+      if (
+        formData.currentMainImage &&
+        typeof formData.currentMainImage !== "string"
+      ) {
+        URL.revokeObjectURL(formData.currentMainImage);
+      }
+      formData.newImages.forEach((image) => {
+        if (typeof image.preview === "string")
+          URL.revokeObjectURL(image.preview);
+      });
+    };
+  }, [formData.currentMainImage, formData.newImages]);
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
-
-  const handleVariantInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setVariantFormData((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : value,
     }));
@@ -482,7 +479,7 @@ function ProductManagement() {
             await Promise.all(
               bulkProducts.map((product) =>
                 axios.post(
-                  "https://backend-ps76.onrender.com/api/admin/products",
+                  "https://e-commerce-2-gbm9.onrender.com/api/admin/products",
                   product,
                   {
                     headers: { Authorization: `Bearer ${token}` },
@@ -864,7 +861,7 @@ function ProductManagement() {
       let updatedProduct;
       if (editingProductId) {
         const res = await axios.put(
-          `https://backend-ps76.onrender.com/api/admin/products/${editingProductId}`,
+          `https://e-commerce-2-gbm9.onrender.com/api/admin/products/${editingProductId}`,
           form,
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -879,7 +876,7 @@ function ProductManagement() {
         toast.success("Product updated successfully!");
       } else {
         const res = await axios.post(
-          "https://backend-ps76.onrender.com/api/admin/products",
+          "https://e-commerce-2-gbm9.onrender.com/api/admin/products",
           form,
           {
             headers: { Authorization: `Bearer ${token}` },
@@ -1046,7 +1043,7 @@ function ProductManagement() {
       });
 
       const res = await axios.put(
-        `https://backend-ps76.onrender.com/api/admin/products/${variantModal}`,
+        `https://e-commerce-2-gbm9.onrender.com/api/admin/products/${variantModal}`,
         updateForm,
         {
           headers: {
@@ -1174,7 +1171,7 @@ const handleSubmit = async (e) => {
     let updatedProduct;
     if (editingProductId) {
       const res = await axios.put(
-        `https://backend-ps76.onrender.com/api/admin/products/${editingProductId}`,
+        `https://e-commerce-2-gbm9.onrender.com/api/admin/products/${editingProductId}`,
         form,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -1189,7 +1186,7 @@ const handleSubmit = async (e) => {
       toast.success("Product updated successfully!");
     } else {
       const res = await axios.post(
-        "https://backend-ps76.onrender.com/api/admin/products",
+        "https://e-commerce-2-gbm9.onrender.com/api/admin/products",
         form,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -1302,7 +1299,7 @@ const handleVariantSubmit = async (e) => {
     });
 
     const res = await axios.put(
-      `https://backend-ps76.onrender.com/api/admin/products/${variantModal}`,
+      `https://e-commerce-2-gbm9.onrender.com/api/admin/products/${variantModal}`,
       updateForm,
       {
         headers: {
@@ -1424,7 +1421,7 @@ const handleVariantSubmit = async (e) => {
       }
 
       await axios.delete(
-        `https://backend-ps76.onrender.com/api/admin/products/${productId}`,
+        `https://e-commerce-2-gbm9.onrender.com/api/admin/products/${productId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -1469,7 +1466,7 @@ const handleVariantSubmit = async (e) => {
       await Promise.all(
         selectedProducts.map((p) =>
           axios.delete(
-            `https://backend-ps76.onrender.com/api/admin/products/${p._id}`,
+            `https://e-commerce-2-gbm9.onrender.com/api/admin/products/${p._id}`,
             {
               headers: { Authorization: `Bearer ${token}` },
             }
@@ -1535,7 +1532,7 @@ const handleVariantSubmit = async (e) => {
       }
 
       await axios.post(
-        "https://backend-ps76.onrender.com/api/admin/products",
+        "https://e-commerce-2-gbm9.onrender.com/api/admin/products",
         form,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -1569,7 +1566,7 @@ const handleVariantSubmit = async (e) => {
       }
 
       const res = await axios.put(
-        `https://backend-ps76.onrender.com/api/admin/products/${productId}/toggle-status`,
+        `https://e-commerce-2-gbm9.onrender.com/api/admin/products/${productId}/toggle-status`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );

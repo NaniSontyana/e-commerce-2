@@ -20,7 +20,7 @@ function AdminSignup() {
     }
 
     try {
-      const res = await axios.post('https://backend-ps76.onrender.com/api/admin/register', { username, email, password });
+      const res = await axios.post('https://e-commerce-2-gbm9.onrender.com/api/admin/register', { username, email, password });
       localStorage.setItem('token', res.data.token); // Store the token
       navigate('/dashboard'); // Redirect to dashboard
     } catch (err) {

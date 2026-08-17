@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import useDebounce from '../hooks/useDebounce'; // Ensure this path is correct
@@ -22,7 +22,7 @@ function AdminOrders() {
   const navigate = useNavigate();
   const debouncedSearchTerm = useDebounce(searchTerm, 500); // Debounce search term with 500ms delay
 
-  const fetchOrders = async (page = 1) => {
+  const fetchOrders = useCallback(async (page = 1) => {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
@@ -32,7 +32,7 @@ function AdminOrders() {
         return;
       }
       const response = await axios.get(
-        `https://backend-ps76.onrender.com/api/orders/admin?page=${page}&limit=10&status=${statusFilter}&sortBy=${sortBy}&order=${sortOrder}&search=${debouncedSearchTerm}`,
+        `https://e-commerce-2-gbm9.onrender.com/api/orders/admin?page=${page}&limit=10&status=${statusFilter}&sortBy=${sortBy}&order=${sortOrder}&search=${debouncedSearchTerm}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setOrders(response.data.orders);
@@ -46,7 +46,7 @@ function AdminOrders() {
       setError(err.response?.data?.message || 'Failed to fetch orders');
       setLoading(false);
     }
-  };
+  }, [statusFilter, sortBy, sortOrder, debouncedSearchTerm]);
 
   const handleSearch = (e) => {
     const term = e.target.value;
@@ -62,7 +62,7 @@ function AdminOrders() {
         return;
       }
       const response = await axios.get(
-        `https://backend-ps76.onrender.com/api/orders/admin/details/${orderId}`,
+        `https://e-commerce-2-gbm9.onrender.com/api/orders/admin/details/${orderId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setSelectedOrder(response.data);
@@ -81,7 +81,7 @@ function AdminOrders() {
         return;
       }
       await axios.put(
-        `https://backend-ps76.onrender.com/api/orders/admin/${orderId}`,
+        `https://e-commerce-2-gbm9.onrender.com/api/orders/admin/${orderId}`,
         { status: newStatus },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -107,7 +107,7 @@ function AdminOrders() {
 
   useEffect(() => {
     fetchOrders(currentPage);
-  }, [currentPage, statusFilter, sortBy, sortOrder, debouncedSearchTerm]);
+  }, [currentPage, fetchOrders]);
 
   if (loading) {
     return (

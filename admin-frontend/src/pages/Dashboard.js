@@ -47,7 +47,7 @@ function Dashboard() {
     const fetchProducts = async () => {
       try {
         const params = new URLSearchParams({ page: currentPage, limit: productsPerPage });
-        const res = await axios.get(`https://backend-ps76.onrender.com/api/admin/products?${params.toString()}`, {
+        const res = await axios.get(`https://e-commerce-2-gbm9.onrender.com/api/admin/products?${params.toString()}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -67,7 +67,7 @@ function Dashboard() {
         }
 
         // Process image URLs to handle Cloudinary URLs, local paths, and placeholders
-        const baseUrl = 'https://backend-ps76.onrender.com';
+        const baseUrl = 'https://e-commerce-2-gbm9.onrender.com';
         const updatedProducts = fetchedProducts.map(product => {
           let processedImage = product.image || 'https://placehold.co/150?text=No+Image';
 
