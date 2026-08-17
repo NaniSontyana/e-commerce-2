@@ -57,7 +57,7 @@ function ProductDetails() {
     if (!user || !user._id) return;
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get(`https://backend-ps76.onrender.com/api/wishlist/user/${user._id}`, {
+      const res = await axios.get(`https://e-commerce-2-gbm9.onrender.com/api/wishlist/user/${user._id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const isProductInWishlist = res.data.some((item) => item.productId?._id === id);
@@ -78,7 +78,7 @@ function ProductDetails() {
     try {
       setReviewsLoading(true);
       setReviewsError('');
-      const res = await axios.get(`https://backend-ps76.onrender.com/api/reviews/product/${id}`);
+      const res = await axios.get(`https://e-commerce-2-gbm9.onrender.com/api/reviews/product/${id}`);
       if (!Array.isArray(res.data)) {
         setReviews([]);
         setAverageRating(0);
@@ -263,12 +263,12 @@ function ProductDetails() {
     try {
       const token = localStorage.getItem('token');
       if (isInWishlist) {
-        const wishlistItem = await axios.get(`https://backend-ps76.onrender.com/api/wishlist/user/${user._id}`, {
+        const wishlistItem = await axios.get(`https://e-commerce-2-gbm9.onrender.com/api/wishlist/user/${user._id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const itemToRemove = wishlistItem.data.find((item) => item.productId?._id === id);
         if (itemToRemove) {
-          await axios.delete(`https://backend-ps76.onrender.com/api/wishlist/${itemToRemove._id}`, {
+          await axios.delete(`https://e-commerce-2-gbm9.onrender.com/api/wishlist/${itemToRemove._id}`, {
             headers: { Authorization: `Bearer ${token}` },
           });
           setIsInWishlist(false);
@@ -276,7 +276,7 @@ function ProductDetails() {
         }
       } else {
         await axios.post(
-          'https://backend-ps76.onrender.com/api/wishlist',
+          'https://e-commerce-2-gbm9.onrender.com/api/wishlist',
           { userId: user._id, productId: id },
           { headers: { Authorization: `Bearer ${token}` } }
         );

@@ -86,13 +86,13 @@ function Profile() {
             setLoading(true);
             const token = localStorage.getItem('token');
             const [profileRes, ordersRes, wishlistRes] = await Promise.all([
-              axios.get('https://backend-ps76.onrender.com/api/users/profile', {
+              axios.get('https://e-commerce-2-gbm9.onrender.com/api/users/profile', {
                 headers: { Authorization: `Bearer ${token}` },
               }),
-              axios.get(`https://backend-ps76.onrender.com/api/orders/user/${user._id}`, {
+              axios.get(`https://e-commerce-2-gbm9.onrender.com/api/orders/user/${user._id}`, {
                 headers: { Authorization: `Bearer ${token}` },
               }),
-              axios.get(`https://backend-ps76.onrender.com/api/wishlist/user/${user._id}`, {
+              axios.get(`https://e-commerce-2-gbm9.onrender.com/api/wishlist/user/${user._id}`, {
                 headers: { Authorization: `Bearer ${token}` },
               }),
             ]);
@@ -101,7 +101,7 @@ function Profile() {
             const avatarUrl = updatedUser.avatar
               ? updatedUser.avatar.startsWith('http')
                 ? updatedUser.avatar
-                : `https://backend-ps76.onrender.com${updatedUser.avatar}`
+                : `https://e-commerce-2-gbm9.onrender.com${updatedUser.avatar}`
               : '/default-avatar.jpg';
             const newProfileData = {
               username: updatedUser.username || '',
@@ -174,18 +174,18 @@ function Profile() {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        'https://backend-ps76.onrender.com/api/users/profile',
+        'https://e-commerce-2-gbm9.onrender.com/api/users/profile',
         { username: profileData.username, address: profileData.address },
         { headers: { Authorization: `Bearer ${token}` } }
       );
-      const updatedProfileRes = await axios.get('https://backend-ps76.onrender.com/api/users/profile', {
+      const updatedProfileRes = await axios.get('https://e-commerce-2-gbm9.onrender.com/api/users/profile', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const updatedUser = updatedProfileRes.data;
       const avatarUrl = updatedUser.avatar
         ? updatedUser.avatar.startsWith('http')
           ? updatedUser.avatar
-          : `https://backend-ps76.onrender.com${updatedUser.avatar}`
+          : `https://e-commerce-2-gbm9.onrender.com${updatedUser.avatar}`
         : profileData.avatar;
       const newProfileData = {
         username: updatedUser.username || '',
@@ -220,7 +220,7 @@ function Profile() {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        'https://backend-ps76.onrender.com/api/users/profile/shipping-address',
+        'https://e-commerce-2-gbm9.onrender.com/api/users/profile/shipping-address',
         {
           fullName: shippingAddressForm.fullName.trim(),
           address: shippingAddressForm.address.trim(),
@@ -231,7 +231,7 @@ function Profile() {
         },
         { headers: { Authorization: `Bearer ${token}` } }
       );
-      const updatedProfileRes = await axios.get('https://backend-ps76.onrender.com/api/users/profile', {
+      const updatedProfileRes = await axios.get('https://e-commerce-2-gbm9.onrender.com/api/users/profile', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const updatedUser = updatedProfileRes.data;
@@ -268,11 +268,11 @@ function Profile() {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        'https://backend-ps76.onrender.com/api/users/profile/shipping-address',
+        'https://e-commerce-2-gbm9.onrender.com/api/users/profile/shipping-address',
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
-      const updatedProfileRes = await axios.get('https://backend-ps76.onrender.com/api/users/profile', {
+      const updatedProfileRes = await axios.get('https://e-commerce-2-gbm9.onrender.com/api/users/profile', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const updatedUser = updatedProfileRes.data;
@@ -310,7 +310,7 @@ function Profile() {
     formData.append('avatar', avatarFile);
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.post('https://backend-ps76.onrender.com/api/users/profile/avatar', formData, {
+      const res = await axios.post('https://e-commerce-2-gbm9.onrender.com/api/users/profile/avatar', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,
@@ -320,7 +320,7 @@ function Profile() {
       const avatarUrl = updatedUser.avatar
         ? updatedUser.avatar.startsWith('http')
           ? updatedUser.avatar
-          : `https://backend-ps76.onrender.com${updatedUser.avatar}`
+          : `https://e-commerce-2-gbm9.onrender.com${updatedUser.avatar}`
         : '';
       const newProfileData = { ...profileData, avatar: avatarUrl };
       setProfileData(newProfileData);
@@ -359,7 +359,7 @@ function Profile() {
 
       const token = localStorage.getItem('token');
       await axios.put(
-        'https://backend-ps76.onrender.com/api/users/profile/password',
+        'https://e-commerce-2-gbm9.onrender.com/api/users/profile/password',
         { currentPassword, newPassword },
         { headers: { Authorization: `Bearer ${token}` } }
       );

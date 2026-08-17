@@ -189,7 +189,7 @@ function Products() {
       const fetchWishlist = async () => {
         try {
           const token = localStorage.getItem('token');
-          const res = await axios.get(`https://backend-ps76.onrender.com/api/wishlist/user/${user._id}`, {
+          const res = await axios.get(`https://e-commerce-2-gbm9.onrender.com/api/wishlist/user/${user._id}`, {
             headers: { Authorization: `Bearer ${token}` },
           });
           setWishlist(res.data);
@@ -210,7 +210,7 @@ function Products() {
           setRatingsError('');
           const ratingsData = {};
           for (const product of products) {
-            const res = await axios.get(`https://backend-ps76.onrender.com/api/reviews/product/${product._id}`);
+            const res = await axios.get(`https://e-commerce-2-gbm9.onrender.com/api/reviews/product/${product._id}`);
             if (!Array.isArray(res.data)) {
               ratingsData[product._id] = { averageRating: 0, reviewCount: 0 };
               setRatingsError(res.data.message || 'Failed to load ratings for some products.');
@@ -561,7 +561,7 @@ function Products() {
     }
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.post(`https://backend-ps76.onrender.com/api/wishlist`, { productId }, { headers: { Authorization: `Bearer ${token}` } });
+      const res = await axios.post(`https://e-commerce-2-gbm9.onrender.com/api/wishlist`, { productId }, { headers: { Authorization: `Bearer ${token}` } });
       setWishlist([...wishlist, res.data.item]);
       setWishlistMessages((prev) => ({ ...prev, [productId]: true }));
       setTimeout(() => {
@@ -578,7 +578,7 @@ function Products() {
       const token = localStorage.getItem('token');
       const wishlistItem = wishlist.find((item) => item.productId && item.productId._id === productId);
       if (!wishlistItem) return;
-      await axios.delete(`https://backend-ps76.onrender.com/api/wishlist/${wishlistItem._id}`, { headers: { Authorization: `Bearer ${token}` } });
+      await axios.delete(`https://e-commerce-2-gbm9.onrender.com/api/wishlist/${wishlistItem._id}`, { headers: { Authorization: `Bearer ${token}` } });
       setWishlist(wishlist.filter((item) => item._id !== wishlistItem._id));
     } catch (err) {
       console.error('Error removing from wishlist:', err);
@@ -594,7 +594,7 @@ function Products() {
     }
     try {
       const token = localStorage.getItem('token');
-      await axios.post(`https://backend-ps76.onrender.com/api/price-alert`, { productId }, { headers: { Authorization: `Bearer ${token}` } });
+      await axios.post(`https://e-commerce-2-gbm9.onrender.com/api/price-alert`, { productId }, { headers: { Authorization: `Bearer ${token}` } });
       setPriceAlerts([...priceAlerts, productId]);
       toast.success('Price alert set successfully!');
     } catch (err) {

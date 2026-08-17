@@ -18,7 +18,7 @@ export function CartProvider({ children }) {
         return;
       }
 
-      const res = await axios.get('https://backend-ps76.onrender.com/api/cart', {
+      const res = await axios.get('https://e-commerce-2-gbm9.onrender.com/api/cart', {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -115,7 +115,7 @@ export function CartProvider({ children }) {
 
         for (const item of items) {
           res = await axios.post(
-            'https://backend-ps76.onrender.com/api/cart/add',
+            'https://e-commerce-2-gbm9.onrender.com/api/cart/add',
             { productId: item.productId, quantity: item.quantity, size: item.size, variantId: item.variantId },
             { headers: { Authorization: `Bearer ${token}` } }
           );
@@ -123,7 +123,7 @@ export function CartProvider({ children }) {
       } else {
         console.log('Adding single item to cart:', product, 'Size:', size, 'VariantId:', variantId);
         const payload = { productId: product._id, quantity: 1, size, variantId };
-        res = await axios.post('https://backend-ps76.onrender.com/api/cart/add', payload, {
+        res = await axios.post('https://e-commerce-2-gbm9.onrender.com/api/cart/add', payload, {
           headers: { Authorization: `Bearer ${token}` },
         });
         console.log('Add to cart response:', res.data);
@@ -214,7 +214,7 @@ export function CartProvider({ children }) {
       }
 
       console.log('Removing item with ID:', itemId);
-      const res = await axios.delete(`https://backend-ps76.onrender.com/api/cart/${itemId}`, {
+      const res = await axios.delete(`https://e-commerce-2-gbm9.onrender.com/api/cart/${itemId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -295,7 +295,7 @@ export function CartProvider({ children }) {
 
       console.log('Updating quantity for item ID:', itemId, 'to:', quantity);
       const res = await axios.put(
-        `https://backend-ps76.onrender.com/api/cart/${itemId}`,
+        `https://e-commerce-2-gbm9.onrender.com/api/cart/${itemId}`,
         { quantity },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -381,7 +381,7 @@ export function CartProvider({ children }) {
         return;
       }
 
-      const res = await axios.delete('https://backend-ps76.onrender.com/api/cart', {
+      const res = await axios.delete('https://e-commerce-2-gbm9.onrender.com/api/cart', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCart(res.data.cart?.items || []);

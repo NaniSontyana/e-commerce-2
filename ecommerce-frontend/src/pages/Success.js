@@ -9,7 +9,7 @@ function Success() {
   const [orderDetails, setOrderDetails] = useState(null);
   const [error, setError] = useState('');
 
-  const BACKEND_URL = 'https://backend-ps76.onrender.com';
+  const BACKEND_URL = 'https://e-commerce-2-gbm9.onrender.com';
 
   useEffect(() => {
     const fetchOrderDetails = async () => {
@@ -166,7 +166,7 @@ function Success() {
   const [error, setError] = useState('');
 
   // Backend base URL for images
-  const BACKEND_URL = 'https://backend-ps76.onrender.com';
+  const BACKEND_URL = 'https://e-commerce-2-gbm9.onrender.com';
 
   useEffect(() => {
     const fetchOrderDetails = async () => {

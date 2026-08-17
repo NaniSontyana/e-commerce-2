@@ -17,7 +17,7 @@ function OrderDetails() {
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const res = await axios.get(`https://backend-ps76.onrender.com/api/orders/${orderId}`, {
+      const res = await axios.get(`https://e-commerce-2-gbm9.onrender.com/api/orders/${orderId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setOrder(res.data);
@@ -47,7 +47,7 @@ function OrderDetails() {
     const interval = setInterval(async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get(`https://backend-ps76.onrender.com/api/orders/${orderId}`, {
+        const res = await axios.get(`https://e-commerce-2-gbm9.onrender.com/api/orders/${orderId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setOrder(res.data);
@@ -121,19 +121,19 @@ Order Details:
       const token = localStorage.getItem('token');
       const item = order.items[0];
       if (isInWishlist) {
-        const wishlistItem = await axios.get(`https://backend-ps76.onrender.com/api/wishlist/user/${user._id}`, {
+        const wishlistItem = await axios.get(`https://e-commerce-2-gbm9.onrender.com/api/wishlist/user/${user._id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const itemToRemove = wishlistItem.data.find((item) => item.productId?._id === item.productId._id);
         if (itemToRemove) {
-          await axios.delete(`https://backend-ps76.onrender.com/api/wishlist/${itemToRemove._id}`, {
+          await axios.delete(`https://e-commerce-2-gbm9.onrender.com/api/wishlist/${itemToRemove._id}`, {
             headers: { Authorization: `Bearer ${token}` },
           });
           setIsInWishlist(false);
         }
       } else {
         await axios.post(
-          'https://backend-ps76.onrender.com/api/wishlist',
+          'https://e-commerce-2-gbm9.onrender.com/api/wishlist',
           { userId: user._id, productId: item.productId._id },
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -456,7 +456,7 @@ function OrderDetails() {
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const res = await axios.get(`https://backend-ps76.onrender.com/api/orders/${orderId}`, {
+      const res = await axios.get(`https://e-commerce-2-gbm9.onrender.com/api/orders/${orderId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setOrder(res.data);
@@ -478,7 +478,7 @@ function OrderDetails() {
     const interval = setInterval(async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get(`https://backend-ps76.onrender.com/api/orders/${orderId}`, {
+        const res = await axios.get(`https://e-commerce-2-gbm9.onrender.com/api/orders/${orderId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setOrder(res.data);
@@ -552,19 +552,19 @@ Order Details:
       const token = localStorage.getItem('token');
       const item = order.items[0];
       if (isInWishlist) {
-        const wishlistItem = await axios.get(`https://backend-ps76.onrender.com/api/wishlist/user/${user._id}`, {
+        const wishlistItem = await axios.get(`https://e-commerce-2-gbm9.onrender.com/api/wishlist/user/${user._id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const itemToRemove = wishlistItem.data.find((item) => item.productId?._id === item.productId._id);
         if (itemToRemove) {
-          await axios.delete(`https://backend-ps76.onrender.com/api/wishlist/${itemToRemove._id}`, {
+          await axios.delete(`https://e-commerce-2-gbm9.onrender.com/api/wishlist/${itemToRemove._id}`, {
             headers: { Authorization: `Bearer ${token}` },
           });
           setIsInWishlist(false);
         }
       } else {
         await axios.post(
-          'https://backend-ps76.onrender.com/api/wishlist',
+          'https://e-commerce-2-gbm9.onrender.com/api/wishlist',
           { userId: user._id, productId: item.productId._id },
           { headers: { Authorization: `Bearer ${token}` } }
         );

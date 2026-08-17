@@ -43,7 +43,7 @@ export function ProductProvider({ children }) {
       setError(null);
       try {
         const token = localStorage.getItem('token'); // If authentication is required
-        const res = await axios.get('https://backend-ps76.onrender.com/api/products', {
+        const res = await axios.get('https://e-commerce-2-gbm9.onrender.com/api/products', {
           headers: { Authorization: `Bearer ${token}` },
         });
         console.log('Raw product data from backend:', res.data);
@@ -165,7 +165,7 @@ export function ProductProvider({ children }) {
         params.append('category', categoryPath);
       }
 
-      const res = await axios.get(`https://backend-ps76.onrender.com/api/products?${params.toString()}`);
+      const res = await axios.get(`https://e-commerce-2-gbm9.onrender.com/api/products?${params.toString()}`);
       console.log('Raw product data from backend with filters:', res.data);
       const fetchedProducts = res.data.map((item) => {
         const image =
@@ -266,7 +266,7 @@ export function ProductProvider({ children }) {
 
   const fetchProductById = async (productId) => {
     try {
-      const res = await axios.get(`https://backend-ps76.onrender.com/api/products/${productId}`);
+      const res = await axios.get(`https://e-commerce-2-gbm9.onrender.com/api/products/${productId}`);
       console.log('Raw product data for ID', productId, ':', res.data);
       const item = res.data;
 

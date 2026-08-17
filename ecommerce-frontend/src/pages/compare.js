@@ -68,7 +68,7 @@ function Compare() {
       try {
         const token = localStorage.getItem('token');
         const promises = missingProductIds.map(id =>
-          axios.get(`https://backend-ps76.onrender.com/api/products/${id}`, {
+          axios.get(`https://e-commerce-2-gbm9.onrender.com/api/products/${id}`, {
             headers: { Authorization: `Bearer ${token}` },
           })
         );
