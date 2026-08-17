@@ -4,13 +4,7 @@ const Admin = require('../models/admin');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-const getJwtSecret = () => {
-  const secret = process.env.JWT_SECRET || process.env.Jwt_Secret || process.env.jwt_secret;
-  if (secret && typeof secret === 'string' && secret.trim() !== '' && secret !== 'undefined' && secret !== 'null') {
-    return secret.trim();
-  }
-  return 'ReB1GbhL1I';
-};
+const JWT_SECRET_KEY = (process.env.JWT_SECRET && String(process.env.JWT_SECRET).trim() !== '' && process.env.JWT_SECRET !== 'undefined') ? String(process.env.JWT_SECRET).trim() : 'ReB1GbhL1I';
 
 // Middleware to verify admin
 const verifyAdmin = async (req, res, next) => { 
@@ -18,7 +12,7 @@ const verifyAdmin = async (req, res, next) => {
   if (!token) return res.status(401).json({ message: 'Unauthorized: No token provided' });
 
   try {
-    const decoded = jwt.verify(token, getJwtSecret());
+    const decoded = jwt.verify(token, JWT_SECRET_KEY);
     const admin = await Admin.findById(decoded.id).select('-password');
     if (!admin) {
       return res.status(401).json({ message: 'User not found, authorization denied' });
@@ -72,7 +66,7 @@ router.post('/register', async (req, res) => {
     await admin.save();
 
     // Generate JWT token
-    const token = jwt.sign({ id: admin._id, isAdmin: admin.isAdmin }, getJwtSecret(), { expiresIn: '6h' });
+    const token = jwt.sign({ id: admin._id, isAdmin: admin.isAdmin }, JWT_SECRET_KEY, { expiresIn: '6h' });
 
     // Return success response with token
     res.status(201).json({ message: 'Admin registered successfully', token });
@@ -87,13 +81,14 @@ router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   try {
+    const secretToUse = (process.env.JWT_SECRET && String(process.env.JWT_SECRET).trim() !== '') ? String(process.env.JWT_SECRET).trim() : 'ReB1GbhL1I';
     const admin = await Admin.findOne({ email });
     if (!admin) return res.status(400).json({ message: 'Invalid credentials' });
 
     const isMatch = await bcrypt.compare(password, admin.password);
     if (!isMatch) return res.status(400).json({ message: 'Invalid credentials' });
 
-    const token = jwt.sign({ id: admin._id, isAdmin: admin.isAdmin || false }, getJwtSecret(), { expiresIn: '6h' });
+    const token = jwt.sign({ id: admin._id, isAdmin: admin.isAdmin || false }, secretToUse, { expiresIn: '6h' });
     res.json({ token });
   } catch (err) {
     res.status(500).json({ message: 'Server error', error: err.message });
