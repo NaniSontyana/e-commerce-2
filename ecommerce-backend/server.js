@@ -10,20 +10,40 @@ dotenv.config();
 const app = express();
 
 // Configure CORS
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:5002',
+  'http://localhost:5001',
+  'http://localhost:5003',
+  'http://localhost:5004',
+  'https://backend-ps76.onrender.com',
+  'https://frontend-8uy4.onrender.com',
+  'https://admin-frontend-o3u7.onrender.com',
+  'https://e-commerce-2-gbm9.onrender.com',
+  'https://e-commerce-2-orcin.vercel.app',
+  process.env.CLIENT_URL,
+  process.env.FRONTEND_URL
+].filter(Boolean);
+
 app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:5002',
-    'http://localhost:5001',
-    'http://localhost:5003',
-    'http://localhost:5004',
-    'https://backend-ps76.onrender.com',
-    'https://frontend-8uy4.onrender.com',
-    'https://admin-frontend-o3u7.onrender.com',
-    'https://e-commerce-2-gbm9.onrender.com'
-  ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps, curl, postman)
+    if (!origin) return callback(null, true);
+
+    if (
+      allowedOrigins.includes(origin) ||
+      /\.vercel\.app$/.test(origin) ||
+      /\.onrender\.com$/.test(origin) ||
+      /^http:\/\/localhost:\d+$/.test(origin)
+    ) {
+      return callback(null, true);
+    }
+
+    return callback(null, true);
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
 }));
 
 // Middleware
