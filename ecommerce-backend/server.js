@@ -7,6 +7,9 @@ const cloudinary = require('cloudinary').v2;
 
 dotenv.config();
 
+// Ensure JWT_SECRET has a fallback globally
+process.env.JWT_SECRET = process.env.JWT_SECRET || process.env.Jwt_Secret || 'ReB1GbhL1I';
+
 const app = express();
 
 // Configure CORS
