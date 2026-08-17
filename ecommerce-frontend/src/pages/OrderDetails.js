@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import axios from 'axios';
@@ -13,15 +13,7 @@ function OrderDetails() {
   const [error, setError] = useState('');
   const [isInWishlist, setIsInWishlist] = useState(false);
 
-  useEffect(() => {
-    if (!authLoading && !user) {
-      navigate('/login');
-    } else if (user && user._id) {
-      fetchOrderDetails();
-    }
-  }, [user, authLoading, navigate, orderId]);
-
-  const fetchOrderDetails = async () => {
+  const fetchOrderDetails = useCallback(async () => {
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
@@ -41,7 +33,15 @@ function OrderDetails() {
       }
       setLoading(false);
     }
-  };
+  }, [orderId, logout, navigate]);
+
+  useEffect(() => {
+    if (!authLoading && !user) {
+      navigate('/login');
+    } else if (user && user._id) {
+      fetchOrderDetails();
+    }
+  }, [user, authLoading, navigate, fetchOrderDetails]);
 
   useEffect(() => {
     const interval = setInterval(async () => {
@@ -349,7 +349,7 @@ Order Details:
                 {order.shippingAddress?.phoneNumber && (
                   <li><strong>Phone:</strong> {order.shippingAddress.phoneNumber}</li>
                 )}
-                {!order.shippingAddress || Object.keys(order.shippingAddress).length === 0 && (
+                {(!order.shippingAddress || Object.keys(order.shippingAddress).length === 0) && (
                   <li>No shipping address available.</li>
                 )}
               </ul>

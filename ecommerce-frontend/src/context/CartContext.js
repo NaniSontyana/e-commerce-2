@@ -1,4 +1,4 @@
-import { createContext, useState, useContext, useEffect } from 'react';
+import { createContext, useState, useContext, useEffect, useCallback } from 'react';
 import { useAuth } from './AuthContext';
 import { toast } from 'react-toastify';
 import axios from 'axios';
@@ -10,15 +10,7 @@ export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
   const [coupon, setCoupon] = useState(null);
 
-  useEffect(() => {
-    if (user && user._id) {
-      fetchCart();
-    } else {
-      setCart([]);
-    }
-  }, [user]);
-
-  const fetchCart = async () => {
+  const fetchCart = useCallback(async () => {
     try {
       const token = localStorage.getItem('token');
       if (!token) {
@@ -93,7 +85,15 @@ export function CartProvider({ children }) {
         });
       }
     }
-  };
+  }, [logout]);
+
+  useEffect(() => {
+    if (user && user._id) {
+      fetchCart();
+    } else {
+      setCart([]);
+    }
+  }, [user, fetchCart]);
 
   const addToCart = async (product, size = null, variantId = null, isBulk = false) => {
     try {

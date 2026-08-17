@@ -90,7 +90,8 @@ function Orders() {
     }
   }, [orders]);
 
-  const fetchWishlist = async () => {
+  const fetchWishlist = useCallback(async () => {
+    if (!user || !user._id) return;
     try {
       const token = localStorage.getItem('token');
       const res = await axios.get(`https://backend-ps76.onrender.com/api/wishlist/user/${user._id}`, {
@@ -101,7 +102,7 @@ function Orders() {
       console.error('Error fetching wishlist:', err);
       setError(err.response?.data?.message || 'Failed to fetch wishlist.');
     }
-  };
+  }, [user]);
 
   useEffect(() => {
     if (!authLoading && !user) {
@@ -114,7 +115,7 @@ function Orders() {
         setLoading(false);
       }
     }
-  }, [user, authLoading, navigate, fetchOrders, orders.length]);
+  }, [user, authLoading, navigate, fetchOrders, fetchWishlist, orders.length]);
 
   useEffect(() => {
     if (orders.length > 0) {

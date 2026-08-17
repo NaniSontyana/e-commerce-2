@@ -2,7 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useProducts } from '../context/ProductContext';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -53,6 +53,59 @@ function ProductDetails() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [id]);
 
+  const fetchWishlist = useCallback(async () => {
+    if (!user || !user._id) return;
+    try {
+      const token = localStorage.getItem('token');
+      const res = await axios.get(`https://backend-ps76.onrender.com/api/wishlist/user/${user._id}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      const isProductInWishlist = res.data.some((item) => item.productId?._id === id);
+      setIsInWishlist(isProductInWishlist);
+    } catch (err) {
+      console.error('Error fetching wishlist:', err);
+      if (err.response?.status === 401 || err.response?.status === 403) {
+        await logout();
+        navigate('/login');
+        toast.error('Session expired. Please log in again.');
+      } else {
+        toast.error(err.response?.data?.message || 'Failed to load wishlist status.');
+      }
+    }
+  }, [user, id, logout, navigate]);
+
+  const fetchReviews = useCallback(async () => {
+    try {
+      setReviewsLoading(true);
+      setReviewsError('');
+      const res = await axios.get(`https://backend-ps76.onrender.com/api/reviews/product/${id}`);
+      if (!Array.isArray(res.data)) {
+        setReviews([]);
+        setAverageRating(0);
+        setRatingBreakdown({ 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 });
+        setReviewsLoading(false);
+        setReviewsError(res.data.message || 'Failed to load reviews. Please try again.');
+        return;
+      }
+      setReviews(res.data);
+      calculateAverageRating(res.data);
+      calculateRatingBreakdown(res.data);
+      setReviewsLoading(false);
+    } catch (err) {
+      setReviewsError(err.response?.data?.message || 'Failed to load reviews. Please try again later.');
+      setReviews([]);
+      setAverageRating(0);
+      setRatingBreakdown({ 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 });
+      setReviewsLoading(false);
+    }
+  }, [id]);
+
+  const checkIfInCompare = useCallback(() => {
+    if (!product || !product._id) return;
+    const compareList = JSON.parse(localStorage.getItem('compareList') || '[]');
+    setIsCompareAdded(compareList.includes(product._id));
+  }, [product]);
+
   useEffect(() => {
     if (authLoading) return;
 
@@ -82,54 +135,7 @@ function ProductDetails() {
       fetchWishlist();
       checkIfInCompare();
     }
-  }, [product, id, user, authLoading, navigate]);
-
-  const fetchWishlist = async () => {
-    if (!user || !user._id) return;
-    try {
-      const token = localStorage.getItem('token');
-      const res = await axios.get(`https://backend-ps76.onrender.com/api/wishlist/user/${user._id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      const isProductInWishlist = res.data.some((item) => item.productId?._id === id);
-      setIsInWishlist(isProductInWishlist);
-    } catch (err) {
-      console.error('Error fetching wishlist:', err);
-      if (err.response?.status === 401 || err.response?.status === 403) {
-        await logout();
-        navigate('/login');
-        toast.error('Session expired. Please log in again.');
-      } else {
-        toast.error(err.response?.data?.message || 'Failed to load wishlist status.');
-      }
-    }
-  };
-
-  const fetchReviews = async () => {
-    try {
-      setReviewsLoading(true);
-      setReviewsError('');
-      const res = await axios.get(`https://backend-ps76.onrender.com/api/reviews/product/${id}`);
-      if (!Array.isArray(res.data)) {
-        setReviews([]);
-        setAverageRating(0);
-        setRatingBreakdown({ 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 });
-        setReviewsLoading(false);
-        setReviewsError(res.data.message || 'Failed to load reviews. Please try again.');
-        return;
-      }
-      setReviews(res.data);
-      calculateAverageRating(res.data);
-      calculateRatingBreakdown(res.data);
-      setReviewsLoading(false);
-    } catch (err) {
-      setReviewsError(err.response?.data?.message || 'Failed to load reviews. Please try again later.');
-      setReviews([]);
-      setAverageRating(0);
-      setRatingBreakdown({ 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 });
-      setReviewsLoading(false);
-    }
-  };
+  }, [product, id, user, authLoading, navigate, fetchReviews, fetchWishlist, checkIfInCompare]);
 
   const calculateAverageRating = (reviews) => {
     if (!Array.isArray(reviews) || reviews.length === 0) {
@@ -218,7 +224,6 @@ function ProductDetails() {
 
     setZoomLensPosition({ x, y });
 
-    const zoomResultSize = rect.width;
     const zoomFactor = 2;
     const backgroundX = (x / rect.width) * 100 * zoomFactor;
     const backgroundY = (y / rect.height) * 100 * zoomFactor;
@@ -355,11 +360,6 @@ function ProductDetails() {
         { position: 'top-right', autoClose: 2000 }
       );
     }
-  };
-
-  const checkIfInCompare = () => {
-    const compareList = JSON.parse(localStorage.getItem('compareList') || '[]');
-    setIsCompareAdded(compareList.includes(product._id));
   };
 
   const handleCompareToggle = () => {

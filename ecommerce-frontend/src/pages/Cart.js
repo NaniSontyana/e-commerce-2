@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
@@ -8,13 +8,13 @@ import '../styles/Cart.css';
 
 function Cart() {
   const { user, loading: authLoading } = useAuth();
-  const { cart: rawCart, removeFromCart, updateQuantity, clearCart, applyCoupon, coupon, calculateSubtotal, calculateTotal } = useCart();
+  const { cart: rawCart, removeFromCart, updateQuantity, applyCoupon, coupon, calculateSubtotal, calculateTotal } = useCart();
   const navigate = useNavigate();
   const [couponCode, setCouponCode] = useState('');
   const [selectedItems, setSelectedItems] = useState([]); // State for selected items
 
   // Ensure cart is always an array, even if undefined
-  const cart = Array.isArray(rawCart) ? rawCart : [];
+  const cart = useMemo(() => (Array.isArray(rawCart) ? rawCart : []), [rawCart]);
 
   useEffect(() => {
     if (!authLoading && !user) {
