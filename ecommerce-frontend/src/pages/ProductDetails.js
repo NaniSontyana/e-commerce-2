@@ -620,7 +620,7 @@ function ProductDetails() {
                       >
                         <img
                           src={variantImage}
-                          alt={`Main Image for Variant ${variantLabel}`}
+                          alt={`Variant ${variantLabel}`}
                           onError={(e) => {
                             console.error(`Failed to load main image for ${variantLabel}: ${variantImage}`);
                             e.target.src = 'https://placehold.co/40?text=No+Image';
